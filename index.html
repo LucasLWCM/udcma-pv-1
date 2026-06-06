@@ -1955,7 +1955,7 @@
 
       function tryEndpoint(index) {
         const controller = 'AbortController' in window ? new AbortController() : null;
-        const timeout = controller ? setTimeout(() => controller.abort(), 2200) : null;
+        const timeout = controller ? setTimeout(() => controller.abort(), 1400) : null;
 
         return fetch(endpoints[index], {
           cache: 'no-store',
@@ -1974,6 +1974,16 @@
       }
 
       return tryEndpoint(0);
+    }
+
+    function runAfterPageSettles(callback, delay) {
+      window.setTimeout(() => {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(callback, { timeout: 2000 });
+        } else {
+          callback();
+        }
+      }, delay);
     }
 
     function showSalesToast(preferredLocation) {
@@ -2008,16 +2018,15 @@
       }, delay);
     }
 
-    // Primeiro toast aparece rápido
+    // Evita colocar geolocalização na cadeia crítica de carregamento.
     window.addEventListener('load', () => {
-      visitorLocationPromise = fetchVisitorLocation();
-
-      setTimeout(() => {
+      runAfterPageSettles(() => {
+        visitorLocationPromise = fetchVisitorLocation();
         visitorLocationPromise.then((visitorLocation) => {
           showSalesToast(visitorLocation);
           scheduleNextToast();
         });
-      }, 4000);
+      }, 6500);
     }, { once: true });
   </script>
 </body>
