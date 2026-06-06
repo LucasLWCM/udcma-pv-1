@@ -7,9 +7,10 @@
   <title>Um Dia Com Marco Aurélio — Rafa Barbosa</title>
 
   <!-- Preload LCP (thumbnail do vídeo) -->
-  <link rel="preload" as="image" href="../img/capa/capa_video.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="img/capa/capa_video.webp" fetchpriority="high">
 
   <!-- Google Fonts: não-bloqueante -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@400;500;700;800&display=swap"
@@ -74,6 +75,12 @@
       background: var(--divider);
       margin: 0 auto;
       max-width: var(--max-width);
+    }
+
+    section:not(#hero),
+    footer {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 900px;
     }
 
     /* ── Typography ── */
@@ -612,47 +619,10 @@
       margin-bottom: 32px;
     }
 
-    .payment-seals {
-      margin-top: 20px;
-    }
-
-    .payment-seals img {
-      max-width: 300px;
-      width: 100%;
-      opacity: 0.7;
-    }
-
-    .access-tag {
-      display: inline-block;
-      margin-top: 16px;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cta-gold-mid);
-    }
-
     /* ════ SEÇÃO: Prova Social ════ */
     #social-proof {
       padding: var(--section-padding);
       background: var(--bg-matte);
-    }
-
-    .social-proof-title {
-      text-align: center;
-      font-size: clamp(26px, 4vw, 44px);
-      color: var(--cta-primary);
-      margin-bottom: 12px;
-    }
-
-    .social-proof-sub {
-      text-align: center;
-      font-size: 18px;
-      color: var(--text-secondary);
-      margin-bottom: 48px;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .testimonials-grid {
@@ -720,17 +690,6 @@
       left: 0;
       font-size: 13px;
       top: 2px;
-    }
-
-    .proof-mockup {
-      text-align: center;
-      margin: 48px 0;
-    }
-
-    .proof-mockup img {
-      max-width: 100%;
-      width: 480px;
-      border-radius: 12px;
     }
 
     /* ════ SEÇÃO: Sobre o autor ════ */
@@ -846,16 +805,6 @@
       margin: 0 auto 32px;
     }
 
-    .access-tag-guarantee {
-      display: block;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cta-gold-mid);
-      margin-top: 16px;
-    }
-
     /* ════ SEÇÃO: CTA Final ════ */
     #cta-final {
       padding: var(--section-padding);
@@ -870,26 +819,6 @@
       max-width: 680px;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    .urgency-text {
-      max-width: 640px;
-      margin: 0 auto 40px;
-      font-size: 18px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    .urgency-text .highlight {
-      color: var(--text-main);
-      font-weight: 700;
-    }
-
-    .product-name-final {
-      font-family: var(--font-heading);
-      font-size: clamp(28px, 4vw, 48px);
-      color: var(--cta-primary);
-      margin: 24px 0;
     }
 
     /* ════ SEÇÃO: FAQ ════ */
@@ -1004,7 +933,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
       opacity: 0;
       transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       max-width: 320px;
@@ -1070,6 +999,7 @@
         max-width: none;
         bottom: -120px;
       }
+
       .sales-toast.show {
         bottom: 16px;
       }
@@ -1106,20 +1036,55 @@
       }
     }
   </style>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KQRVLNJ7');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2115550092258715');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2115550092258715&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQRVLNJ7" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 
 
   <!-- SEÇÃO: Hero -->
   <section id="hero">
-    <img class="hero-bg hero-bg-desktop" src="../img/hero/capadesktop-1.webp" alt="" width="1920" height="1080"
+    <img class="hero-bg hero-bg-desktop" src="img/hero/capadesktop-1.webp" alt="" width="1920" height="1080"
       fetchpriority="high" decoding="async">
-    <img class="hero-bg hero-bg-mobile" src="../img/hero/Capa-Mob_1_11zon.webp" alt="" width="768" height="1024"
+    <img class="hero-bg hero-bg-mobile" src="img/hero/Capa-Mob_1_11zon.webp" alt="" width="768" height="1024"
       fetchpriority="high" decoding="async">
     <div class="hero-content">
-      <h1>Você já tentou aprender estoicismo. Mas quando a vida apertou de verdade — <span>as emoções ganharam de
+      <h1>Você já tentou viver o estoicismo. Mas quando a vida apertou de verdade — <span>as emoções ganharam de
           novo.</span></h1>
       <p class="hero-sub">3 episódios de 20 minutos. Marco Aurélio ao seu lado. Uma experiência que não te ensina sobre
         filosofia — te faz viver ela.</p>
@@ -1132,14 +1097,14 @@
         frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
         title="Um Dia Com Marco Aurélio"></iframe>
       <div class="vsl-thumbnail" id="vsl-thumb" onclick="playVideo()">
-        <img src="../img/capa/capa_video.webp" alt="Assistir vídeo — Um Dia Com Marco Aurélio" width="720" height="405"
+        <img src="img/capa/capa_video.webp" alt="Assistir vídeo — Um Dia Com Marco Aurélio" width="720" height="405"
           fetchpriority="high" decoding="sync">
         <div class="vsl-play"></div>
       </div>
     </div>
     <p
       style="text-align:center;font-size:14px;color:var(--text-secondary);margin-top:12px;position:relative;z-index:1;">
-      ▶ 3.000+ alunos já viveram esse dia</p>
+      ▶ + de 3.000 alunos já viveram esse dia</p>
   </section>
 
   <div class="section-divider"></div>
@@ -1213,8 +1178,8 @@
 
       <div class="episodes-grid">
         <div class="episode-card">
-          <img class="ep-thumb" src="../img/ep/ep1-1.webp" alt="Episódio 1 — Amanhecer" width="400" height="225"
-            loading="lazy" decoding="async">
+          <img class="ep-thumb" src="img/ep/ep1-1.webp" alt="Episódio 1 — Amanhecer" width="400" height="225"
+            loading="lazy" decoding="async" fetchpriority="low">
           <div class="ep-body">
             <div class="ep-label">Episódio 1</div>
             <h3>Amanhecer</h3>
@@ -1229,8 +1194,8 @@
         </div>
         <div class="episode-card"
           style="border-color:var(--cta-primary);background:linear-gradient(145deg, rgba(235,192,104,0.05), rgba(235,192,104,0.01));">
-          <img class="ep-thumb" src="../img/ep/ep3-1.webp" alt="Episódio 2 — Meio-dia" width="400" height="225"
-            loading="lazy" decoding="async">
+          <img class="ep-thumb" src="img/ep/ep3-1.webp" alt="Episódio 2 — Meio-dia" width="400" height="225"
+            loading="lazy" decoding="async" fetchpriority="low">
           <div class="ep-body">
             <div
               style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--cta-text);background:var(--cta-primary);display:inline-block;padding:4px 12px;border-radius:999px;margin-bottom:8px;">
@@ -1247,8 +1212,8 @@
           </div>
         </div>
         <div class="episode-card">
-          <img class="ep-thumb" src="../img/ep/ep4-1.webp" alt="Episódio 3 — Anoitecer" width="400" height="225"
-            loading="lazy" decoding="async">
+          <img class="ep-thumb" src="img/ep/ep4-1.webp" alt="Episódio 3 — Anoitecer" width="400" height="225"
+            loading="lazy" decoding="async" fetchpriority="low">
           <div class="ep-body">
             <div class="ep-label">Episódio 3</div>
             <h3>Anoitecer</h3>
@@ -1276,32 +1241,32 @@
         style="font-family:var(--font-heading);font-size:clamp(26px,4vw,44px);color:var(--cta-primary);text-align:center;margin-bottom:40px;">
         Depoimentos retirados da plataforma da série</h2>
       <div class="testimonials-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200432.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 200432.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200443.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 200443.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200504.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 200504.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200531.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 200531.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200918.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 200918.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200933.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 200933.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201007.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 201007.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201027.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 201027.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201047.png" alt="Depoimento Hotmart"
-          width="400" height="300" loading="lazy" decoding="async"
+        <img src="img/testimonials/Hotmart/Captura de tela 2026-06-05 201047.png" alt="Depoimento Hotmart" width="400"
+          height="300" loading="lazy" decoding="async" fetchpriority="low"
           style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
       </div>
     </div>
@@ -1323,8 +1288,8 @@
 
       <div class="bonus-grid">
         <div class="bonus-card">
-          <img class="bonus-thumb" src="../img/bonus/roteiro.webp" alt="Roteiro Estoico" width="400" height="225"
-            loading="lazy" decoding="async">
+          <img class="bonus-thumb" src="img/bonus/roteiro.webp" alt="Roteiro Estoico" width="400" height="225"
+            loading="lazy" decoding="async" fetchpriority="low">
           <div class="bonus-body">
             <div class="bonus-name">Roteiro Estoico</div>
             <div class="bonus-price">Valor: <span class="strike">R$ 47,00</span></div>
@@ -1334,8 +1299,8 @@
           </div>
         </div>
         <div class="bonus-card">
-          <img class="bonus-thumb" src="../img/bonus/Estoico-em-campo.webp" alt="Estoico em Campo" width="400"
-            height="225" loading="lazy" decoding="async">
+          <img class="bonus-thumb" src="img/bonus/Estoico-em-campo.webp" alt="Estoico em Campo" width="400" height="225"
+            loading="lazy" decoding="async" fetchpriority="low">
           <div class="bonus-body">
             <div class="bonus-name">Estoico em Campo</div>
             <div class="bonus-price">Valor: <span class="strike">R$ 67,00</span></div>
@@ -1346,8 +1311,8 @@
           </div>
         </div>
         <div class="bonus-card">
-          <img class="bonus-thumb" src="../img/bonus/sementes.webp" alt="Sementes Matinais" width="400" height="225"
-            loading="lazy" decoding="async">
+          <img class="bonus-thumb" src="img/bonus/sementes.webp" alt="Sementes Matinais" width="400" height="225"
+            loading="lazy" decoding="async" fetchpriority="low">
           <div class="bonus-body">
             <div class="bonus-name">Sementes Matinais</div>
             <div class="bonus-price">12 meses inclusos — Valor: <span class="strike">R$ 19,90/mês</span></div>
@@ -1357,8 +1322,8 @@
           </div>
         </div>
         <div class="bonus-card">
-          <img class="bonus-thumb" src="../img/bonus/Noites.webp" alt="Noites de Pórtico" width="400" height="225"
-            loading="lazy" decoding="async">
+          <img class="bonus-thumb" src="img/bonus/Noites.webp" alt="Noites de Pórtico" width="400" height="225"
+            loading="lazy" decoding="async" fetchpriority="low">
           <div class="bonus-body">
             <div class="bonus-name">Noites de Pórtico</div>
             <div class="bonus-price">Valor: <span class="strike">R$ 67,00 por aula</span></div>
@@ -1484,8 +1449,8 @@
         <div class="card" style="display:flex;flex-direction:column;gap:16px;">
           <div style="color:#EBC068;font-size:18px;letter-spacing:2px;">⭐⭐⭐⭐⭐</div>
           <div style="display:flex;align-items:center;gap:12px;">
-            <img src="../img/testimonials/fotos/Claudia.png" alt="Cláudia R." width="48" height="48" loading="lazy"
-              decoding="async"
+            <img src="img/testimonials/fotos/Claudia.webp" alt="Cláudia R." width="48" height="48" loading="lazy"
+              decoding="async" fetchpriority="low"
               style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(199,158,59,0.4);flex-shrink:0;">
             <div>
               <div style="font-weight:700;color:#F5F0E8;font-size:15px;">Cláudia R., 47 anos</div>
@@ -1503,8 +1468,8 @@
         <div class="card" style="display:flex;flex-direction:column;gap:16px;">
           <div style="color:#EBC068;font-size:18px;letter-spacing:2px;">⭐⭐⭐⭐⭐</div>
           <div style="display:flex;align-items:center;gap:12px;">
-            <img src="../img/testimonials/fotos/sonia.png" alt="Sônia B." width="48" height="48" loading="lazy"
-              decoding="async"
+            <img src="img/testimonials/fotos/sonia.webp" alt="Sônia B." width="48" height="48" loading="lazy"
+              decoding="async" fetchpriority="low"
               style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(199,158,59,0.4);flex-shrink:0;">
             <div>
               <div style="font-weight:700;color:#F5F0E8;font-size:15px;">Sônia B., 58 anos</div>
@@ -1524,13 +1489,16 @@
 
       <!-- Prints WhatsApp -->
       <div class="testimonials-grid">
-        <img src="../img/testimonials/8.2.webp" alt="Depoimento" width="300" height="400" loading="lazy"
-          decoding="async">
-        <img src="../img/testimonials/5.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
-        <img src="../img/testimonials/6.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
-        <img src="../img/testimonials/9.2.webp" alt="Depoimento" width="300" height="400" loading="lazy"
-          decoding="async">
-        <img src="../img/testimonials/7.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
+        <img src="img/testimonials/8.2.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async"
+          fetchpriority="low">
+        <img src="img/testimonials/5.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async"
+          fetchpriority="low">
+        <img src="img/testimonials/6.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async"
+          fetchpriority="low">
+        <img src="img/testimonials/9.2.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async"
+          fetchpriority="low">
+        <img src="img/testimonials/7.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async"
+          fetchpriority="low">
       </div>
     </div>
   </section>
@@ -1573,16 +1541,18 @@
     <div class="container">
       <div class="about-inner">
         <div class="about-photo" style="position:relative; padding-bottom:24px;">
-          <img src="../img/author/Quem-sou_v2-1.webp" alt="Palestras Rafa Barbosa" loading="lazy" decoding="async"
+          <img src="img/author/Quem-sou_v2-1.webp" alt="Palestras Rafa Barbosa" width="1032" height="720" loading="lazy"
+            decoding="async" fetchpriority="low"
             style="width:100%; height:auto; display:block; border-radius:12px; border:1px solid rgba(199,158,59,0.2);">
-          <img src="../img/author/Capa-Rafa1-1.webp" alt="Rafa Barbosa" loading="lazy" decoding="async"
+          <img src="img/author/Capa-Rafa1-1.webp" alt="Rafa Barbosa" width="960" height="540" loading="lazy"
+            decoding="async" fetchpriority="low"
             style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:88%; height:auto; border-radius:12px; box-shadow:0 12px 32px rgba(0,0,0,0.6); border:1px solid rgba(199,158,59,0.3);">
         </div>
         <div class="about-text">
           <div class="who-label">Quem é</div>
           <h2>Rafa Barbosa</h2>
           <p>Filósofo (com graduação e pós em Filosofia), Professor e Escritor, Rafa é reconhecido como a Nova Voz da
-            Filosofia no Brasil. Suas palestras já impactaram mais de 70.000 pessoas.</p>
+            Filosofia no Brasil. Suas palestras já impactaram mais de 80.000 pessoas.</p>
           <p style="margin-top:16px;">Se você já perdeu horas no YouTube, teve livros pela metade e ouviu podcasts que
             esqueceu rapidamente — Rafa Barbosa defende uma coisa com clareza: <strong style="color:var(--text-main);">O
               problema não é você.</strong></p>
@@ -1592,7 +1562,7 @@
           <p style="margin-top:20px;color:var(--cta-primary);font-weight:700;font-size:18px;font-style:italic;">Aceita
             esse convite?</p>
           <div class="about-stat">
-            <div class="stat-number">70k+</div>
+            <div class="stat-number" style="font-family:var(--font-body);">80k+</div>
             <div class="stat-label">pessoas impactadas<br>pelas palestras do Rafa</div>
           </div>
         </div>
@@ -1799,7 +1769,11 @@
       <p class="toast-time">de <span id="toast-location">São Paulo, SP</span></p>
     </div>
     <div class="toast-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
     </div>
   </div>
 
@@ -1872,7 +1846,7 @@
 
       const randomName = toastData.names[Math.floor(Math.random() * toastData.names.length)];
       const randomLocation = toastData.locations[Math.floor(Math.random() * toastData.locations.length)];
-      
+
       nameEl.textContent = randomName;
       locationEl.textContent = randomLocation;
       avatarEl.textContent = randomName.charAt(0);
@@ -1888,7 +1862,7 @@
       const minTime = 10000; // 10 segundos
       const maxTime = 22000; // 22 segundos
       const delay = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
-      
+
       setTimeout(() => {
         showSalesToast();
         scheduleNextToast();
