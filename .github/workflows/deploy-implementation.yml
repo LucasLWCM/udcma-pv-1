@@ -1,0 +1,21 @@
+name: Trigger implementation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call implementation trigger
+        env:
+          IMPLEMENTATION_TRIGGER_URL: ${{ secrets.IMPLEMENTATION_TRIGGER_URL || secrets.TOKEN_IMPLEMENTACAO }}
+        run: |
+          if [ -z "$IMPLEMENTATION_TRIGGER_URL" ]; then
+            echo "IMPLEMENTATION_TRIGGER_URL secret is not configured."
+            exit 1
+          fi
+
+          curl --fail --show-error --silent --location "$IMPLEMENTATION_TRIGGER_URL"
