@@ -1104,7 +1104,7 @@
     <img class="hero-bg hero-bg-mobile" src="img/hero/Capa-Mob_1_11zon.webp" alt="" width="768" height="1024"
       fetchpriority="high" decoding="async">
     <div class="hero-content">
-      <h1>Aprenda a controlar suas<span> reações emocionais</span> em 3 episódios. Usando a filosofia estoica que Marco
+      <h1>Aprenda a <span>controlar suas reações emocionais</span> em 3 episódios. Usando a filosofia estoica que Marco
         Aurélio praticou como imperador de Roma.</h1>
       <p class="hero-sub">3 episódios de 20 minutos. Marco Aurélio ao seu lado. Uma experiência que não te ensina sobre
         filosofia — te faz viver ela.</p>
@@ -1849,7 +1849,65 @@
     // Sistema de Notificações de Venda (Toast)
     const toastData = {
       names: ['João P.', 'Maria S.', 'Carlos T.', 'Ana L.', 'Felipe C.', 'Juliana M.', 'Rafael F.', 'Fernanda R.', 'Lucas B.', 'Mariana V.', 'Pedro H.', 'Camila S.', 'Rodrigo M.', 'Aline T.', 'Bruno C.', 'Thiago P.', 'Letícia G.', 'Ricardo M.', 'Carolina A.', 'Eduardo S.'],
-      locations: ['São Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG', 'Curitiba, PR', 'Porto Alegre, RS', 'Brasília, DF', 'Salvador, BA', 'Fortaleza, CE', 'Goiânia, GO', 'Recife, PE', 'Campinas, SP', 'Florianópolis, SC', 'Vitória, ES', 'Natal, RN', 'João Pessoa, PB', 'Ribeirão Preto, SP', 'Cuiabá, MT', 'Campo Grande, MS']
+      locations: ['São Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG', 'Curitiba, PR', 'Porto Alegre, RS', 'Brasília, DF', 'Salvador, BA', 'Fortaleza, CE', 'Goiânia, GO', 'Recife, PE', 'Campinas, SP', 'Florianópolis, SC', 'Vitória, ES', 'Natal, RN', 'João Pessoa, PB', 'Ribeirão Preto, SP', 'Cuiabá, MT', 'Campo Grande, MS'],
+      locationsByState: {
+        AC: ['Rio Branco, AC', 'Cruzeiro do Sul, AC'],
+        AL: ['Maceió, AL', 'Arapiraca, AL'],
+        AP: ['Macapá, AP', 'Santana, AP'],
+        AM: ['Manaus, AM', 'Parintins, AM'],
+        BA: ['Salvador, BA', 'Feira de Santana, BA', 'Vitória da Conquista, BA'],
+        CE: ['Fortaleza, CE', 'Juazeiro do Norte, CE', 'Sobral, CE'],
+        DF: ['Brasília, DF'],
+        ES: ['Vitória, ES', 'Vila Velha, ES', 'Serra, ES'],
+        GO: ['Goiânia, GO', 'Anápolis, GO', 'Aparecida de Goiânia, GO'],
+        MA: ['São Luís, MA', 'Imperatriz, MA'],
+        MT: ['Cuiabá, MT', 'Várzea Grande, MT', 'Rondonópolis, MT'],
+        MS: ['Campo Grande, MS', 'Dourados, MS'],
+        MG: ['Belo Horizonte, MG', 'Uberlândia, MG', 'Contagem, MG', 'Juiz de Fora, MG'],
+        PA: ['Belém, PA', 'Ananindeua, PA', 'Santarém, PA'],
+        PB: ['João Pessoa, PB', 'Campina Grande, PB'],
+        PR: ['Curitiba, PR', 'Londrina, PR', 'Maringá, PR'],
+        PE: ['Recife, PE', 'Jaboatão dos Guararapes, PE', 'Olinda, PE'],
+        PI: ['Teresina, PI', 'Parnaíba, PI'],
+        RJ: ['Rio de Janeiro, RJ', 'Niterói, RJ', 'Nova Iguaçu, RJ'],
+        RN: ['Natal, RN', 'Mossoró, RN'],
+        RS: ['Porto Alegre, RS', 'Caxias do Sul, RS', 'Canoas, RS'],
+        RO: ['Porto Velho, RO', 'Ji-Paraná, RO'],
+        RR: ['Boa Vista, RR'],
+        SC: ['Florianópolis, SC', 'Joinville, SC', 'Blumenau, SC'],
+        SP: ['São Paulo, SP', 'Campinas, SP', 'Guarulhos, SP', 'Ribeirão Preto, SP', 'Santos, SP'],
+        SE: ['Aracaju, SE', 'Nossa Senhora do Socorro, SE'],
+        TO: ['Palmas, TO', 'Araguaína, TO']
+      },
+      stateNames: {
+        acre: 'AC',
+        alagoas: 'AL',
+        amapa: 'AP',
+        amazonas: 'AM',
+        bahia: 'BA',
+        ceara: 'CE',
+        'distrito federal': 'DF',
+        'espirito santo': 'ES',
+        goias: 'GO',
+        maranhao: 'MA',
+        'mato grosso': 'MT',
+        'mato grosso do sul': 'MS',
+        'minas gerais': 'MG',
+        para: 'PA',
+        paraiba: 'PB',
+        parana: 'PR',
+        pernambuco: 'PE',
+        piaui: 'PI',
+        'rio de janeiro': 'RJ',
+        'rio grande do norte': 'RN',
+        'rio grande do sul': 'RS',
+        rondonia: 'RO',
+        roraima: 'RR',
+        'santa catarina': 'SC',
+        'sao paulo': 'SP',
+        sergipe: 'SE',
+        tocantins: 'TO'
+      }
     };
 
     let visitorLocationPromise = null;
@@ -1863,15 +1921,32 @@
       return value.trim().replace(/\s+/g, ' ').slice(0, 60);
     }
 
+    function normalizeLocationKey(value) {
+      return cleanLocationPart(value)
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function getStateCode(regionValue) {
+      const region = cleanLocationPart(regionValue);
+      if (/^[A-Za-z]{2}$/.test(region)) return region.toUpperCase();
+      return toastData.stateNames[normalizeLocationKey(region)] || '';
+    }
+
     function formatVisitorLocation(response) {
       const data = response && response.data ? response.data : response;
       if (!data || data.success === false) return null;
 
       const city = cleanLocationPart(data.city);
-      const region = cleanLocationPart(data.regionCode || data.region_code || data.region);
-      const countryCode = cleanLocationPart(data.countryCode || data.country_code).toUpperCase();
-      const country = cleanLocationPart(data.country);
+      const regionRaw = cleanLocationPart(data.regionCode || data.region_code || data.region);
+      const regionCode = getStateCode(regionRaw);
+      const region = regionCode || regionRaw;
+      const countryCode = cleanLocationPart(data.countryCode || data.country_code || data.country).toUpperCase();
+      const country = cleanLocationPart(data.countryName || data.country_name);
+      const stateFallbacks = toastData.locationsByState[regionCode];
 
+      if (!city && stateFallbacks) return getRandomItem(stateFallbacks);
       if (!city) return null;
       if (region && (!countryCode || countryCode === 'BR')) return `${city}, ${region}`;
       if (countryCode && countryCode !== 'BR') return `${city}, ${countryCode}`;
@@ -1882,19 +1957,32 @@
     function fetchVisitorLocation() {
       if (!window.fetch) return Promise.resolve(null);
 
-      const controller = 'AbortController' in window ? new AbortController() : null;
-      const timeout = controller ? setTimeout(() => controller.abort(), 2200) : null;
+      const endpoints = [
+        'https://ipapi.co/json/',
+        'https://get.geojs.io/v1/ip/geo.json'
+      ];
 
-      return fetch('https://api.ipwho.org/me', {
-        cache: 'no-store',
-        signal: controller ? controller.signal : undefined
-      })
-        .then((response) => response.ok ? response.json() : null)
-        .then(formatVisitorLocation)
-        .catch(() => null)
-        .finally(() => {
-          if (timeout) clearTimeout(timeout);
-        });
+      function tryEndpoint(index) {
+        const controller = 'AbortController' in window ? new AbortController() : null;
+        const timeout = controller ? setTimeout(() => controller.abort(), 2200) : null;
+
+        return fetch(endpoints[index], {
+          cache: 'no-store',
+          signal: controller ? controller.signal : undefined
+        })
+          .then((response) => response.ok ? response.json() : null)
+          .then(formatVisitorLocation)
+          .catch(() => null)
+          .finally(() => {
+            if (timeout) clearTimeout(timeout);
+          })
+          .then((location) => {
+            if (location || index === endpoints.length - 1) return location;
+            return tryEndpoint(index + 1);
+          });
+      }
+
+      return tryEndpoint(0);
     }
 
     function showSalesToast(preferredLocation) {
