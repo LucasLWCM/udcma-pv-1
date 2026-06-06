@@ -1852,15 +1852,60 @@
       locations: ['São Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG', 'Curitiba, PR', 'Porto Alegre, RS', 'Brasília, DF', 'Salvador, BA', 'Fortaleza, CE', 'Goiânia, GO', 'Recife, PE', 'Campinas, SP', 'Florianópolis, SC', 'Vitória, ES', 'Natal, RN', 'João Pessoa, PB', 'Ribeirão Preto, SP', 'Cuiabá, MT', 'Campo Grande, MS']
     };
 
-    function showSalesToast() {
+    let visitorLocationPromise = null;
+
+    function getRandomItem(items) {
+      return items[Math.floor(Math.random() * items.length)];
+    }
+
+    function cleanLocationPart(value) {
+      if (typeof value !== 'string') return '';
+      return value.trim().replace(/\s+/g, ' ').slice(0, 60);
+    }
+
+    function formatVisitorLocation(response) {
+      const data = response && response.data ? response.data : response;
+      if (!data || data.success === false) return null;
+
+      const city = cleanLocationPart(data.city);
+      const region = cleanLocationPart(data.regionCode || data.region_code || data.region);
+      const countryCode = cleanLocationPart(data.countryCode || data.country_code).toUpperCase();
+      const country = cleanLocationPart(data.country);
+
+      if (!city) return null;
+      if (region && (!countryCode || countryCode === 'BR')) return `${city}, ${region}`;
+      if (countryCode && countryCode !== 'BR') return `${city}, ${countryCode}`;
+      if (country) return `${city}, ${country}`;
+      return city;
+    }
+
+    function fetchVisitorLocation() {
+      if (!window.fetch) return Promise.resolve(null);
+
+      const controller = 'AbortController' in window ? new AbortController() : null;
+      const timeout = controller ? setTimeout(() => controller.abort(), 2200) : null;
+
+      return fetch('https://api.ipwho.org/me', {
+        cache: 'no-store',
+        signal: controller ? controller.signal : undefined
+      })
+        .then((response) => response.ok ? response.json() : null)
+        .then(formatVisitorLocation)
+        .catch(() => null)
+        .finally(() => {
+          if (timeout) clearTimeout(timeout);
+        });
+    }
+
+    function showSalesToast(preferredLocation) {
       const toast = document.getElementById('sales-toast');
       if (!toast) return;
       const nameEl = document.getElementById('toast-name');
       const locationEl = document.getElementById('toast-location');
       const avatarEl = document.getElementById('toast-avatar');
 
-      const randomName = toastData.names[Math.floor(Math.random() * toastData.names.length)];
-      const randomLocation = toastData.locations[Math.floor(Math.random() * toastData.locations.length)];
+      const randomName = getRandomItem(toastData.names);
+      const randomLocation = preferredLocation || getRandomItem(toastData.locations);
 
       nameEl.textContent = randomName;
       locationEl.textContent = randomLocation;
@@ -1886,9 +1931,13 @@
 
     // Primeiro toast aparece rápido
     window.addEventListener('load', () => {
+      visitorLocationPromise = fetchVisitorLocation();
+
       setTimeout(() => {
-        showSalesToast();
-        scheduleNextToast();
+        visitorLocationPromise.then((visitorLocation) => {
+          showSalesToast(visitorLocation);
+          scheduleNextToast();
+        });
       }, 4000);
     }, { once: true });
   </script>
