@@ -12,6 +12,7 @@
   <!-- Google Fonts: não-bloqueante -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@400;500;700;800&display=swap"
     onload="this.onload=null;this.rel='stylesheet'">
@@ -923,7 +924,7 @@
     /* ════ Toast Notificação ════ */
     .sales-toast {
       position: fixed;
-      bottom: -100px;
+      bottom: 24px;
       left: 24px;
       z-index: 9999;
       background: var(--bg-matte);
@@ -935,14 +936,16 @@
       gap: 12px;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
       opacity: 0;
-      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: translate3d(0, calc(100% + 48px), 0);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+      will-change: transform, opacity;
       max-width: 320px;
       pointer-events: none;
     }
 
     .sales-toast.show {
-      bottom: 24px;
       opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
 
     .toast-avatar {
@@ -997,10 +1000,6 @@
         left: 16px;
         right: 16px;
         max-width: none;
-        bottom: -120px;
-      }
-
-      .sales-toast.show {
         bottom: 16px;
       }
     }
@@ -1027,10 +1026,6 @@
         grid-template-columns: 1fr;
       }
 
-      #floating-cta {
-        display: none;
-      }
-
       .pricing-box .price {
         font-size: 56px;
       }
@@ -1038,14 +1033,39 @@
   </style>
 
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KQRVLNJ7');</script>
+  <script>
+    window.deferThirdParty = window.deferThirdParty || function (callback, delay) {
+      let started = false;
+      const start = function () {
+        if (started) return;
+        started = true;
+        const run = function () { window.setTimeout(callback, 0); };
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(run, { timeout: 3000 });
+        } else {
+          run();
+        }
+      };
+      ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (eventName) {
+        window.addEventListener(eventName, start, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () {
+        window.setTimeout(start, delay || 0);
+      }, { once: true });
+    };
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    deferThirdParty(function () {
+      if (window.__gtmLoaded) return;
+      window.__gtmLoaded = true;
+      const firstScript = document.getElementsByTagName('script')[0];
+      const gtmScript = document.createElement('script');
+      gtmScript.async = true;
+      gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KQRVLNJ7';
+      firstScript.parentNode.insertBefore(gtmScript, firstScript);
+    }, 10000);
+  </script>
   <!-- End Google Tag Manager -->
 
   <!-- Meta Pixel Code -->
@@ -1778,11 +1798,6 @@
   </div>
 
   <script>
-    const floatingCta = document.getElementById('floating-cta');
-    window.addEventListener('scroll', () => {
-      floatingCta.classList.toggle('visible', window.scrollY > 600);
-    }, { passive: true });
-
     function playVideo() {
       const wrapper = document.getElementById('vsl-thumb');
       const iframe = document.getElementById('vimeo-hero');
@@ -1870,10 +1885,12 @@
     }
 
     // Primeiro toast aparece rápido
-    setTimeout(() => {
-      showSalesToast();
-      scheduleNextToast();
-    }, 4000);
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        showSalesToast();
+        scheduleNextToast();
+      }, 4000);
+    }, { once: true });
   </script>
 </body>
 
