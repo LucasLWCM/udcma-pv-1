@@ -1070,19 +1070,21 @@
 
   <!-- Meta Pixel Code -->
   <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2115550092258715');
-    fbq('track', 'PageView');
+    deferThirdParty(function () {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2115550092258715');
+      fbq('track', 'PageView');
+    }, 5000);
   </script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=2115550092258715&ev=PageView&noscript=1" /></noscript>
@@ -1842,42 +1844,33 @@
           String(s).padStart(2, '0');
       }
 
-      updateTimer();
-      setInterval(updateTimer, 1000);
+      function startTimer() {
+        updateTimer();
+        setInterval(updateTimer, 1000);
+      }
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          observer.disconnect();
+          startTimer();
+        }, { rootMargin: '300px' });
+
+        observer.observe(timerEl);
+      } else {
+        startTimer();
+      }
     });
 
     // Sistema de Notificações de Venda (Toast)
     const toastData = {
       names: ['João P.', 'Maria S.', 'Carlos T.', 'Ana L.', 'Felipe C.', 'Juliana M.', 'Rafael F.', 'Fernanda R.', 'Lucas B.', 'Mariana V.', 'Pedro H.', 'Camila S.', 'Rodrigo M.', 'Aline T.', 'Bruno C.', 'Thiago P.', 'Letícia G.', 'Ricardo M.', 'Carolina A.', 'Eduardo S.'],
       locations: ['São Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG', 'Curitiba, PR', 'Porto Alegre, RS', 'Brasília, DF', 'Salvador, BA', 'Fortaleza, CE', 'Goiânia, GO', 'Recife, PE', 'Campinas, SP', 'Florianópolis, SC', 'Vitória, ES', 'Natal, RN', 'João Pessoa, PB', 'Ribeirão Preto, SP', 'Cuiabá, MT', 'Campo Grande, MS'],
-      locationsByState: {
-        AC: ['Rio Branco, AC', 'Cruzeiro do Sul, AC'],
-        AL: ['Maceió, AL', 'Arapiraca, AL'],
-        AP: ['Macapá, AP', 'Santana, AP'],
-        AM: ['Manaus, AM', 'Parintins, AM'],
-        BA: ['Salvador, BA', 'Feira de Santana, BA', 'Vitória da Conquista, BA'],
-        CE: ['Fortaleza, CE', 'Juazeiro do Norte, CE', 'Sobral, CE'],
-        DF: ['Brasília, DF'],
-        ES: ['Vitória, ES', 'Vila Velha, ES', 'Serra, ES'],
-        GO: ['Goiânia, GO', 'Anápolis, GO', 'Aparecida de Goiânia, GO'],
-        MA: ['São Luís, MA', 'Imperatriz, MA'],
-        MT: ['Cuiabá, MT', 'Várzea Grande, MT', 'Rondonópolis, MT'],
-        MS: ['Campo Grande, MS', 'Dourados, MS'],
-        MG: ['Belo Horizonte, MG', 'Uberlândia, MG', 'Contagem, MG', 'Juiz de Fora, MG'],
-        PA: ['Belém, PA', 'Ananindeua, PA', 'Santarém, PA'],
-        PB: ['João Pessoa, PB', 'Campina Grande, PB'],
-        PR: ['Curitiba, PR', 'Londrina, PR', 'Maringá, PR'],
-        PE: ['Recife, PE', 'Jaboatão dos Guararapes, PE', 'Olinda, PE'],
-        PI: ['Teresina, PI', 'Parnaíba, PI'],
-        RJ: ['Rio de Janeiro, RJ', 'Niterói, RJ', 'Nova Iguaçu, RJ'],
-        RN: ['Natal, RN', 'Mossoró, RN'],
-        RS: ['Porto Alegre, RS', 'Caxias do Sul, RS', 'Canoas, RS'],
-        RO: ['Porto Velho, RO', 'Ji-Paraná, RO'],
-        RR: ['Boa Vista, RR'],
-        SC: ['Florianópolis, SC', 'Joinville, SC', 'Blumenau, SC'],
-        SP: ['São Paulo, SP', 'Campinas, SP', 'Guarulhos, SP', 'Ribeirão Preto, SP', 'Santos, SP'],
-        SE: ['Aracaju, SE', 'Nossa Senhora do Socorro, SE'],
-        TO: ['Palmas, TO', 'Araguaína, TO']
+      stateFallbacks: {
+        AC: 'Rio Branco, AC', AL: 'Maceió, AL', AP: 'Macapá, AP', AM: 'Manaus, AM', BA: 'Salvador, BA', CE: 'Fortaleza, CE', DF: 'Brasília, DF', ES: 'Vitória, ES', GO: 'Goiânia, GO',
+        MA: 'São Luís, MA', MT: 'Cuiabá, MT', MS: 'Campo Grande, MS', MG: 'Belo Horizonte, MG', PA: 'Belém, PA', PB: 'João Pessoa, PB', PR: 'Curitiba, PR', PE: 'Recife, PE',
+        PI: 'Teresina, PI', RJ: 'Rio de Janeiro, RJ', RN: 'Natal, RN', RS: 'Porto Alegre, RS', RO: 'Porto Velho, RO', RR: 'Boa Vista, RR', SC: 'Florianópolis, SC',
+        SP: 'São Paulo, SP', SE: 'Aracaju, SE', TO: 'Palmas, TO'
       },
       stateNames: {
         acre: 'AC',
@@ -1944,9 +1937,9 @@
       const region = regionCode || regionRaw;
       const countryCode = cleanLocationPart(data.countryCode || data.country_code || data.country).toUpperCase();
       const country = cleanLocationPart(data.countryName || data.country_name);
-      const stateFallbacks = toastData.locationsByState[regionCode];
+      const stateFallback = toastData.stateFallbacks[regionCode];
 
-      if (!city && stateFallbacks) return getRandomItem(stateFallbacks);
+      if (!city && stateFallback) return stateFallback;
       if (!city) return null;
       if (region && (!countryCode || countryCode === 'BR')) return `${city}, ${region}`;
       if (countryCode && countryCode !== 'BR') return `${city}, ${countryCode}`;
