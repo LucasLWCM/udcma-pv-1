@@ -206,17 +206,23 @@
     }
 
     #hero h1 {
+      font-family: var(--font-body);
       font-size: clamp(24px, 2.6vw, 36px);
-      color: var(--cta-primary);
-      margin-bottom: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      font-weight: 800;
+      color: rgb(245, 245, 245);
+      font-weight: 700;
+      line-height: 1.35;
+      text-align: center;
+      text-shadow: rgba(0, 0, 0, 0.75) 0px 2px 8px;
+      margin-bottom: 22px;
+    }
+
+    #hero h1 span {
+      color: var(--cta-gold-mid);
     }
 
     #hero .hero-sub {
       font-size: clamp(16px, 2vw, 20px);
-      color: var(--text-secondary);
+      color: rgb(245, 245, 245);
       margin-bottom: 4px;
     }
 
@@ -592,7 +598,7 @@
     }
 
     .pricing-box .price {
-      font-family: var(--font-heading);
+      font-family: var(--font-body);
       font-size: 72px;
       font-weight: 700;
       color: var(--cta-primary);
@@ -812,7 +818,7 @@
     }
 
     .guarantee-badge .days {
-      font-family: var(--font-heading);
+      font-family: var(--font-body);
       font-size: 52px;
       font-weight: 700;
       color: var(--cta-primary);
@@ -985,6 +991,90 @@
       opacity: 0.6;
     }
 
+    /* ════ Toast Notificação ════ */
+    .sales-toast {
+      position: fixed;
+      bottom: -100px;
+      left: 24px;
+      z-index: 9999;
+      background: var(--bg-matte);
+      border: 1px solid rgba(199, 158, 59, 0.3);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      max-width: 320px;
+      pointer-events: none;
+    }
+
+    .sales-toast.show {
+      bottom: 24px;
+      opacity: 1;
+    }
+
+    .toast-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--cta-primary);
+      color: var(--cta-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .toast-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toast-title {
+      font-size: 13px;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .toast-title strong {
+      color: var(--cta-primary);
+    }
+
+    .toast-time {
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .toast-icon {
+      margin-left: auto;
+      color: #10B981;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(16, 185, 129, 0.15);
+      padding: 6px;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 680px) {
+      .sales-toast {
+        left: 16px;
+        right: 16px;
+        max-width: none;
+        bottom: -120px;
+      }
+      .sales-toast.show {
+        bottom: 16px;
+      }
+    }
+
     /* ════ Responsivo ════ */
     @media (max-width: 680px) {
       #hero .hero-bg-desktop {
@@ -1029,7 +1119,8 @@
     <img class="hero-bg hero-bg-mobile" src="../img/hero/Capa-Mob_1_11zon.webp" alt="" width="768" height="1024"
       fetchpriority="high" decoding="async">
     <div class="hero-content">
-      <h1>Você já tentou aprender estoicismo. Mas quando a vida apertou de verdade — as emoções ganharam de novo.</h1>
+      <h1>Você já tentou aprender estoicismo. Mas quando a vida apertou de verdade — <span>as emoções ganharam de
+          novo.</span></h1>
       <p class="hero-sub">3 episódios de 20 minutos. Marco Aurélio ao seu lado. Uma experiência que não te ensina sobre
         filosofia — te faz viver ela.</p>
       <a href="#video"
@@ -1181,17 +1272,37 @@
   <!-- SEÇÃO: Depoimentos Hotmart -->
   <section id="testimonials-hotmart" style="padding:var(--section-padding);background:var(--bg-matte);">
     <div class="container">
-      <h2 style="font-family:var(--font-heading);font-size:clamp(26px,4vw,44px);color:var(--cta-primary);text-align:center;margin-bottom:40px;">Depoimentos retirados da plataforma da série</h2>
+      <h2
+        style="font-family:var(--font-heading);font-size:clamp(26px,4vw,44px);color:var(--cta-primary);text-align:center;margin-bottom:40px;">
+        Depoimentos retirados da plataforma da série</h2>
       <div class="testimonials-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200432.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200443.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200504.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200531.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200918.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200933.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201007.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201027.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
-        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201047.png" alt="Depoimento Hotmart" width="400" height="300" loading="lazy" decoding="async" style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200432.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200443.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200504.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200531.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200918.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 200933.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201007.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201027.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
+        <img src="../img/testimonials/Hotmart/Captura de tela 2026-06-05 201047.png" alt="Depoimento Hotmart"
+          width="400" height="300" loading="lazy" decoding="async"
+          style="width:100%;border-radius:10px;border:1px solid rgba(199,158,59,0.2);">
       </div>
     </div>
   </section>
@@ -1206,7 +1317,9 @@
       <h2 class="section-title">Além da série, preparei 4 bônus criados para uma única finalidade:</h2>
       <p class="section-subtitle">Fazer o estoicismo entrar na sua vida de vez.</p>
 
-      <h3 style="font-family:var(--font-heading);font-size:26px;color:var(--cta-primary);text-align:center;margin-bottom:32px;">Sua jornada completa inclui:</h3>
+      <h3
+        style="font-family:var(--font-heading);font-size:26px;color:var(--cta-primary);text-align:center;margin-bottom:32px;">
+        Sua jornada completa inclui:</h3>
 
       <div class="bonus-grid">
         <div class="bonus-card">
@@ -1214,7 +1327,7 @@
             loading="lazy" decoding="async">
           <div class="bonus-body">
             <div class="bonus-name">Roteiro Estoico</div>
-            <div class="bonus-price">Valor de referência: R$ 47,00</div>
+            <div class="bonus-price">Valor: <span class="strike">R$ 47,00</span></div>
             <p>Para quem precisa ter o conteúdo na mão, não só na memória. As transcrições completas dos 3 episódios com
               reflexões práticas e os momentos mais importantes de cada aula — organizados como um caderno de estudo
               estoico. Você vai sublinhar, anotar e voltar sempre que precisar se reconectar com o que aprendeu.</p>
@@ -1225,7 +1338,7 @@
             height="225" loading="lazy" decoding="async">
           <div class="bonus-body">
             <div class="bonus-name">Estoico em Campo</div>
-            <div class="bonus-price">Valor de referência: R$ 67,00</div>
+            <div class="bonus-price">Valor: <span class="strike">R$ 67,00</span></div>
             <p>O estoicismo quando a vida desaba de verdade. Uma aula exclusiva sobre as 4 situações que mais
               desequilibram qualquer pessoa — e o que Marco Aurélio faria em cada uma: Conflito com alguém que você ama.
               Ansiedade antes de uma decisão importante. Frustração com o que está fora do seu controle. Relacionamento
@@ -1237,7 +1350,7 @@
             loading="lazy" decoding="async">
           <div class="bonus-body">
             <div class="bonus-name">Sementes Matinais</div>
-            <div class="bonus-price">12 meses inclusos — valor de referência: R$ 19,90/mês</div>
+            <div class="bonus-price">12 meses inclusos — Valor: <span class="strike">R$ 19,90/mês</span></div>
             <p>Todo dia de manhã, um áudio do Rafa direto no seu WhatsApp. Não é grupo. Não é conteúdo genérico. É um
               pensamento estoico aplicado ao seu dia — antes de qualquer coisa te distrair. É o que transforma o que
               você aprendeu nos episódios em hábito real.</p>
@@ -1248,7 +1361,7 @@
             loading="lazy" decoding="async">
           <div class="bonus-body">
             <div class="bonus-name">Noites de Pórtico</div>
-            <div class="bonus-price">Valor de referência: R$ 67,00 por aula</div>
+            <div class="bonus-price">Valor: <span class="strike">R$ 67,00 por aula</span></div>
             <p>Encontros ao vivo com Rafa para aprofundar o que você aprendeu. Sem data fixa. Sem compromisso de
               horário. Quando acontece, você participa. Quando não puder, o conteúdo fica disponível. Se você se tornou
               aluna, está dentro — para sempre.</p>
@@ -1289,7 +1402,8 @@
         </li>
       </ul>
 
-      <p style="text-align:center;font-size:18px;color:var(--text-secondary);margin-top:-16px;margin-bottom:32px;">Valor total: <span class="strike">R$ 297,90</span></p>
+      <p style="text-align:center;font-size:18px;color:var(--text-secondary);margin-top:-16px;margin-bottom:32px;">Valor
+        total: <span class="strike">R$ 297,90</span></p>
 
       <div class="pricing-box">
         <div
@@ -1306,9 +1420,13 @@
         </a>
 
         <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(199,158,59,0.2);">
-          <div id="scarcity-timer-wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin-bottom:12px;background:rgba(232,69,63,0.1);padding:10px;border-radius:8px;border:1px solid rgba(232,69,63,0.3);">
-            <div style="font-family:var(--font-heading);font-size:22px;font-weight:800;color:var(--accent-red);background:rgba(232,69,63,0.15);padding:6px 12px;border-radius:6px;letter-spacing:1px;line-height:1;min-width:110px;text-align:center;" id="countdown-timer">24:00:00</div>
-            <span style="font-size:13px;color:var(--accent-red);font-weight:700;text-align:center;max-width:200px;">Após o cronômetro zerar, o valor vai para R$ 97,00</span>
+          <div id="scarcity-timer-wrap"
+            style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin-bottom:12px;background:rgba(232,69,63,0.1);padding:10px;border-radius:8px;border:1px solid rgba(232,69,63,0.3);">
+            <div
+              style="font-family:var(--font-body);font-size:22px;font-weight:800;color:var(--accent-red);background:rgba(232,69,63,0.15);padding:6px 12px;border-radius:6px;letter-spacing:1px;line-height:1;min-width:110px;text-align:center;"
+              id="countdown-timer">24:00:00</div>
+            <span style="font-size:13px;color:var(--accent-red);font-weight:700;text-align:center;max-width:200px;">Após
+              o cronômetro zerar, o valor vai para R$ 97,00</span>
           </div>
           <p style="font-size:13px;color:var(--accent-red);font-weight:700;margin-bottom:16px;">⚠️ Acesso vitalício
             somente para quem comprar esse mês. A partir do próximo ciclo, o acesso muda para anual.</p>
@@ -1366,35 +1484,52 @@
         <div class="card" style="display:flex;flex-direction:column;gap:16px;">
           <div style="color:#EBC068;font-size:18px;letter-spacing:2px;">⭐⭐⭐⭐⭐</div>
           <div style="display:flex;align-items:center;gap:12px;">
-            <img src="../img/testimonials/fotos/Claudia.png" alt="Cláudia R." width="48" height="48" loading="lazy" decoding="async" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(199,158,59,0.4);flex-shrink:0;">
+            <img src="../img/testimonials/fotos/Claudia.png" alt="Cláudia R." width="48" height="48" loading="lazy"
+              decoding="async"
+              style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(199,158,59,0.4);flex-shrink:0;">
             <div>
               <div style="font-weight:700;color:#F5F0E8;font-size:15px;">Cláudia R., 47 anos</div>
               <div style="font-size:13px;color:#A38181;">Belo Horizonte, MG</div>
             </div>
           </div>
-          <p style="font-size:15px;color:#C2BCB0;line-height:1.7;font-style:italic;">"Sou daquelas que compra curso e não termina. Tenho isso gravado na consciência. Quando vi que eram só 3 episódios de 20 minutos pensei 'tudo bem, pior que os outros eu não vou fazer.' Terminei os três numa tarde. E não terminei porque me forcei — terminei porque não queria parar. O episódio do anoitecer, aquela parte sobre aceitar o que não depende de você... chorei. Não de tristeza. De alívio. Como se eu tivesse carregando um peso que eu nem sabia que estava carregando, e alguém finalmente me dissesse que eu podia pousar."</p>
+          <p style="font-size:15px;color:#C2BCB0;line-height:1.7;font-style:italic;">"Sou daquelas que compra curso e
+            não termina. Tenho isso gravado na consciência. Quando vi que eram só 3 episódios de 20 minutos pensei 'tudo
+            bem, pior que os outros eu não vou fazer.' Terminei os três numa tarde. E não terminei porque me forcei —
+            terminei porque não queria parar. O episódio do anoitecer, aquela parte sobre aceitar o que não depende de
+            você... chorei. Não de tristeza. De alívio. Como se eu tivesse carregando um peso que eu nem sabia que
+            estava carregando, e alguém finalmente me dissesse que eu podia pousar."</p>
         </div>
 
         <div class="card" style="display:flex;flex-direction:column;gap:16px;">
           <div style="color:#EBC068;font-size:18px;letter-spacing:2px;">⭐⭐⭐⭐⭐</div>
           <div style="display:flex;align-items:center;gap:12px;">
-            <img src="../img/testimonials/fotos/sonia.png" alt="Sônia B." width="48" height="48" loading="lazy" decoding="async" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(199,158,59,0.4);flex-shrink:0;">
+            <img src="../img/testimonials/fotos/sonia.png" alt="Sônia B." width="48" height="48" loading="lazy"
+              decoding="async"
+              style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(199,158,59,0.4);flex-shrink:0;">
             <div>
               <div style="font-weight:700;color:#F5F0E8;font-size:15px;">Sônia B., 58 anos</div>
               <div style="font-size:13px;color:#A38181;">Curitiba, PR</div>
             </div>
           </div>
-          <p style="font-size:15px;color:#C2BCB0;line-height:1.7;font-style:italic;">"Tenho 58 anos e nunca estudei filosofia na vida. Quando vi que era sobre estoicismo fiquei com medo de não entender nada. Mas o Rafa explica de um jeito que parece que ele está conversando com você, não dando aula. Em nenhum momento eu me senti burra ou por fora. O que mais me surpreendeu foi perceber que eu já conhecia o estoicismo — só não sabia o nome. Aquela sensação de 'isso já estava dentro de mim, só precisava de alguém para organizar.' Hoje, quando começo a ruminar sobre algo que não posso controlar, eu reconheço. E isso já é metade do caminho."</p>
+          <p style="font-size:15px;color:#C2BCB0;line-height:1.7;font-style:italic;">"Tenho 58 anos e nunca estudei
+            filosofia na vida. Quando vi que era sobre estoicismo fiquei com medo de não entender nada. Mas o Rafa
+            explica de um jeito que parece que ele está conversando com você, não dando aula. Em nenhum momento eu me
+            senti burra ou por fora. O que mais me surpreendeu foi perceber que eu já conhecia o estoicismo — só não
+            sabia o nome. Aquela sensação de 'isso já estava dentro de mim, só precisava de alguém para organizar.'
+            Hoje, quando começo a ruminar sobre algo que não posso controlar, eu reconheço. E isso já é metade do
+            caminho."</p>
         </div>
 
       </div>
 
       <!-- Prints WhatsApp -->
       <div class="testimonials-grid">
-        <img src="../img/testimonials/8.2.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
+        <img src="../img/testimonials/8.2.webp" alt="Depoimento" width="300" height="400" loading="lazy"
+          decoding="async">
         <img src="../img/testimonials/5.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
         <img src="../img/testimonials/6.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
-        <img src="../img/testimonials/9.2.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
+        <img src="../img/testimonials/9.2.webp" alt="Depoimento" width="300" height="400" loading="lazy"
+          decoding="async">
         <img src="../img/testimonials/7.webp" alt="Depoimento" width="300" height="400" loading="lazy" decoding="async">
       </div>
     </div>
@@ -1437,9 +1572,11 @@
   <section id="about">
     <div class="container">
       <div class="about-inner">
-        <div class="about-photo">
-          <img src="../img/author/Capa-Rafa1-1.webp" alt="Rafa Barbosa" width="480" height="270" loading="lazy"
-            decoding="async">
+        <div class="about-photo" style="position:relative; padding-bottom:24px;">
+          <img src="../img/author/Quem-sou_v2-1.webp" alt="Palestras Rafa Barbosa" loading="lazy" decoding="async"
+            style="width:100%; height:auto; display:block; border-radius:12px; border:1px solid rgba(199,158,59,0.2);">
+          <img src="../img/author/Capa-Rafa1-1.webp" alt="Rafa Barbosa" loading="lazy" decoding="async"
+            style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:88%; height:auto; border-radius:12px; box-shadow:0 12px 32px rgba(0,0,0,0.6); border:1px solid rgba(199,158,59,0.3);">
         </div>
         <div class="about-text">
           <div class="who-label">Quem é</div>
@@ -1469,8 +1606,7 @@
   <section id="guarantee" style="padding:var(--section-padding);background:var(--bg-crimson);text-align:center;">
     <div class="container">
       <div class="guarantee-badge">
-        <span class="days">7</span>
-        <span class="days-label">dias de<br>garantia</span>
+        <span class="days" style="font-size:80px;">7</span>
       </div>
       <h2
         style="font-family:var(--font-heading);font-size:clamp(28px,4vw,44px);color:var(--cta-primary);margin-bottom:16px;">
@@ -1652,14 +1788,20 @@
   <footer id="footer">
     <div class="container">
       <p>Copyright © Filosofia Viva &nbsp;&nbsp; Todos os Direitos Reservados</p>
-      <div class="dev">
-        Desenvolvido por
-        <img src="../img/footer/Logo-Azure-Fox-Small.webp" alt="Azure Fox" width="60" height="20" loading="lazy"
-          decoding="async">
-        Azure Fox
-      </div>
     </div>
   </footer>
+
+  <!-- Toast Notificação de Compra -->
+  <div id="sales-toast" class="sales-toast">
+    <div class="toast-avatar" id="toast-avatar">R</div>
+    <div class="toast-content">
+      <p class="toast-title"><strong id="toast-name">Rafael M.</strong> acabou de adquirir a série!</p>
+      <p class="toast-time">de <span id="toast-location">São Paulo, SP</span></p>
+    </div>
+    <div class="toast-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    </div>
+  </div>
 
   <script>
     const floatingCta = document.getElementById('floating-cta');
@@ -1714,6 +1856,50 @@
       updateTimer();
       setInterval(updateTimer, 1000);
     });
+
+    // Sistema de Notificações de Venda (Toast)
+    const toastData = {
+      names: ['João P.', 'Maria S.', 'Carlos T.', 'Ana L.', 'Felipe C.', 'Juliana M.', 'Rafael F.', 'Fernanda R.', 'Lucas B.', 'Mariana V.', 'Pedro H.', 'Camila S.', 'Rodrigo M.', 'Aline T.', 'Bruno C.', 'Thiago P.', 'Letícia G.', 'Ricardo M.', 'Carolina A.', 'Eduardo S.'],
+      locations: ['São Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG', 'Curitiba, PR', 'Porto Alegre, RS', 'Brasília, DF', 'Salvador, BA', 'Fortaleza, CE', 'Goiânia, GO', 'Recife, PE', 'Campinas, SP', 'Florianópolis, SC', 'Vitória, ES', 'Natal, RN', 'João Pessoa, PB', 'Ribeirão Preto, SP', 'Cuiabá, MT', 'Campo Grande, MS']
+    };
+
+    function showSalesToast() {
+      const toast = document.getElementById('sales-toast');
+      if (!toast) return;
+      const nameEl = document.getElementById('toast-name');
+      const locationEl = document.getElementById('toast-location');
+      const avatarEl = document.getElementById('toast-avatar');
+
+      const randomName = toastData.names[Math.floor(Math.random() * toastData.names.length)];
+      const randomLocation = toastData.locations[Math.floor(Math.random() * toastData.locations.length)];
+      
+      nameEl.textContent = randomName;
+      locationEl.textContent = randomLocation;
+      avatarEl.textContent = randomName.charAt(0);
+
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }
+
+    function scheduleNextToast() {
+      const minTime = 10000; // 10 segundos
+      const maxTime = 22000; // 22 segundos
+      const delay = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+      
+      setTimeout(() => {
+        showSalesToast();
+        scheduleNextToast();
+      }, delay);
+    }
+
+    // Primeiro toast aparece rápido
+    setTimeout(() => {
+      showSalesToast();
+      scheduleNextToast();
+    }, 4000);
   </script>
 </body>
 
