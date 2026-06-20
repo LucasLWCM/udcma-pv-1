@@ -857,13 +857,17 @@ if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')|
     /* ════ SEÇÃO: FAQ ════ */
     #faq {
       padding: var(--section-padding);
-      background: var(--bg-matte);
+      background: #ffffff;
+      color: #000000;
     }
 
     #faq h2 {
-      font-size: clamp(28px, 4vw, 44px);
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 600;
+      color: #000000;
       text-align: center;
-      color: var(--cta-primary);
+      text-transform: uppercase;
       margin-bottom: 48px;
     }
 
@@ -876,20 +880,21 @@ if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')|
     }
 
     details {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.005));
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(199, 158, 59, 0.15);
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
       border-radius: 10px;
       overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     details summary {
       padding: 20px 24px;
       cursor: pointer;
+      font-family: var(--font-body);
       font-weight: 700;
       font-size: 17px;
-      color: var(--text-main);
+      color: #111111;
       list-style: none;
       display: flex;
       justify-content: space-between;
@@ -914,15 +919,23 @@ if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')|
     }
 
     details[open] {
-      border-color: rgba(199, 158, 59, 0.5);
+      border-color: var(--cta-gold-mid);
+      box-shadow: 0 6px 20px rgba(199, 158, 59, 0.15);
     }
 
     .faq-answer {
       padding: 0 24px 24px;
+      font-family: var(--font-body);
       font-size: 16px;
-      color: var(--text-secondary);
+      color: #444444;
       line-height: 1.7;
       white-space: pre-line;
+      text-align: left;
+    }
+
+    .faq-answer strong {
+      color: #000000;
+      font-weight: 700;
     }
 
     /* ════ SEÇÃO: Footer ════ */
@@ -1676,7 +1689,7 @@ if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')|
   <!-- SEÇÃO: FAQ -->
   <section id="faq">
     <div class="container">
-      <h2>Dúvidas mais importantes:</h2>
+      <h2>DÚVIDAS MAIS IMPORTANTES:</h2>
       <div class="faq-list">
         <details>
           <summary>Isso vai ser diferente do que já tentei antes?</summary>
