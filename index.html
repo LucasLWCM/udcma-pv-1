@@ -1496,6 +1496,79 @@
       color: var(--text-secondary);
     }
 
+    .sales-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 9999;
+      background: var(--bg-matte);
+      border: 1px solid rgba(199, 158, 59, 0.3);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transform: translate3d(0, calc(100% + 48px), 0);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+      will-change: transform, opacity;
+      max-width: 320px;
+      pointer-events: none;
+    }
+
+    .sales-toast.show {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .toast-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--cta-primary);
+      color: var(--cta-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .toast-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toast-title {
+      font-size: 13px;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .toast-title strong {
+      color: var(--cta-primary);
+    }
+
+    .toast-time {
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .toast-icon {
+      margin-left: auto;
+      color: #10B981;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(16, 185, 129, 0.15);
+      padding: 6px;
+      border-radius: 50%;
+    }
+
     /* ── Responsivo ── */
     @media (max-width: 680px) {
       .hero-bg-desktop {
@@ -1508,6 +1581,13 @@
 
       .pricing-box .price {
         font-size: 56px;
+      }
+
+      .sales-toast {
+        left: 16px;
+        right: 16px;
+        max-width: none;
+        bottom: 16px;
       }
     }
   </style>
@@ -2106,6 +2186,21 @@
     </div>
   </footer>
 
+  <div id="sales-toast" class="sales-toast">
+    <div class="toast-avatar" id="toast-avatar">R</div>
+    <div class="toast-content">
+      <p class="toast-title"><strong id="toast-name">Rafael M.</strong> acabou de adquirir a sÃ©rie!</p>
+      <p class="toast-time">de <span id="toast-location">SÃ£o Paulo, SP</span></p>
+    </div>
+    <div class="toast-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+  </div>
+
   <script>
     function playVideo() {
       const thumb = document.getElementById('vsl-thumb');
@@ -2114,6 +2209,173 @@
       iframe.classList.add('active');
       iframe.src = iframe.getAttribute('data-src');
     }
+
+    const toastData = {
+      names: ['JoÃ£o P.', 'Maria S.', 'Carlos T.', 'Ana L.', 'Felipe C.', 'Juliana M.', 'Rafael F.', 'Fernanda R.', 'Lucas B.', 'Mariana V.', 'Pedro H.', 'Camila S.', 'Rodrigo M.', 'Aline T.', 'Bruno C.', 'Thiago P.', 'LetÃ­cia G.', 'Ricardo M.', 'Carolina A.', 'Eduardo S.'],
+      locations: ['SÃ£o Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG', 'Curitiba, PR', 'Porto Alegre, RS', 'BrasÃ­lia, DF', 'Salvador, BA', 'Fortaleza, CE', 'GoiÃ¢nia, GO', 'Recife, PE', 'Campinas, SP', 'FlorianÃ³polis, SC', 'VitÃ³ria, ES', 'Natal, RN', 'JoÃ£o Pessoa, PB', 'RibeirÃ£o Preto, SP', 'CuiabÃ¡, MT', 'Campo Grande, MS'],
+      stateFallbacks: {
+        AC: 'Rio Branco, AC', AL: 'MaceiÃ³, AL', AP: 'MacapÃ¡, AP', AM: 'Manaus, AM', BA: 'Salvador, BA', CE: 'Fortaleza, CE', DF: 'BrasÃ­lia, DF', ES: 'VitÃ³ria, ES', GO: 'GoiÃ¢nia, GO',
+        MA: 'SÃ£o LuÃ­s, MA', MT: 'CuiabÃ¡, MT', MS: 'Campo Grande, MS', MG: 'Belo Horizonte, MG', PA: 'BelÃ©m, PA', PB: 'JoÃ£o Pessoa, PB', PR: 'Curitiba, PR', PE: 'Recife, PE',
+        PI: 'Teresina, PI', RJ: 'Rio de Janeiro, RJ', RN: 'Natal, RN', RS: 'Porto Alegre, RS', RO: 'Porto Velho, RO', RR: 'Boa Vista, RR', SC: 'FlorianÃ³polis, SC',
+        SP: 'SÃ£o Paulo, SP', SE: 'Aracaju, SE', TO: 'Palmas, TO'
+      },
+      stateNames: {
+        acre: 'AC',
+        alagoas: 'AL',
+        amapa: 'AP',
+        amazonas: 'AM',
+        bahia: 'BA',
+        ceara: 'CE',
+        'distrito federal': 'DF',
+        'espirito santo': 'ES',
+        goias: 'GO',
+        maranhao: 'MA',
+        'mato grosso': 'MT',
+        'mato grosso do sul': 'MS',
+        'minas gerais': 'MG',
+        para: 'PA',
+        paraiba: 'PB',
+        parana: 'PR',
+        pernambuco: 'PE',
+        piaui: 'PI',
+        'rio de janeiro': 'RJ',
+        'rio grande do norte': 'RN',
+        'rio grande do sul': 'RS',
+        rondonia: 'RO',
+        roraima: 'RR',
+        'santa catarina': 'SC',
+        'sao paulo': 'SP',
+        sergipe: 'SE',
+        tocantins: 'TO'
+      }
+    };
+
+    let visitorLocationPromise = null;
+
+    function getRandomItem(items) {
+      return items[Math.floor(Math.random() * items.length)];
+    }
+
+    function cleanLocationPart(value) {
+      if (typeof value !== 'string') return '';
+      return value.trim().replace(/\s+/g, ' ').slice(0, 60);
+    }
+
+    function normalizeLocationKey(value) {
+      return cleanLocationPart(value)
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function getStateCode(regionValue) {
+      const region = cleanLocationPart(regionValue);
+      if (/^[A-Za-z]{2}$/.test(region)) return region.toUpperCase();
+      return toastData.stateNames[normalizeLocationKey(region)] || '';
+    }
+
+    function formatVisitorLocation(response) {
+      const data = response && response.data ? response.data : response;
+      if (!data || data.success === false) return null;
+
+      const city = cleanLocationPart(data.city);
+      const regionRaw = cleanLocationPart(data.regionCode || data.region_code || data.region);
+      const regionCode = getStateCode(regionRaw);
+      const region = regionCode || regionRaw;
+      const countryCode = cleanLocationPart(data.countryCode || data.country_code || data.country).toUpperCase();
+      const country = cleanLocationPart(data.countryName || data.country_name);
+      const stateFallback = toastData.stateFallbacks[regionCode];
+
+      if (!city && stateFallback) return stateFallback;
+      if (!city) return null;
+      if (region && (!countryCode || countryCode === 'BR')) return `${city}, ${region}`;
+      if (countryCode && countryCode !== 'BR') return `${city}, ${countryCode}`;
+      if (country) return `${city}, ${country}`;
+      return city;
+    }
+
+    function fetchVisitorLocation() {
+      if (!window.fetch) return Promise.resolve(null);
+
+      const endpoints = [
+        'https://ipapi.co/json/',
+        'https://get.geojs.io/v1/ip/geo.json'
+      ];
+
+      function tryEndpoint(index) {
+        const controller = 'AbortController' in window ? new AbortController() : null;
+        const timeout = controller ? setTimeout(() => controller.abort(), 1400) : null;
+
+        return fetch(endpoints[index], {
+          cache: 'no-store',
+          signal: controller ? controller.signal : undefined
+        })
+          .then((response) => response.ok ? response.json() : null)
+          .then(formatVisitorLocation)
+          .catch(() => null)
+          .finally(() => {
+            if (timeout) clearTimeout(timeout);
+          })
+          .then((location) => {
+            if (location || index === endpoints.length - 1) return location;
+            return tryEndpoint(index + 1);
+          });
+      }
+
+      return tryEndpoint(0);
+    }
+
+    function runAfterPageSettles(callback, delay) {
+      window.setTimeout(() => {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(callback, { timeout: 2000 });
+        } else {
+          callback();
+        }
+      }, delay);
+    }
+
+    function showSalesToast(preferredLocation) {
+      const toast = document.getElementById('sales-toast');
+      if (!toast) return;
+      const nameEl = document.getElementById('toast-name');
+      const locationEl = document.getElementById('toast-location');
+      const avatarEl = document.getElementById('toast-avatar');
+
+      const randomName = getRandomItem(toastData.names);
+      const randomLocation = preferredLocation || getRandomItem(toastData.locations);
+
+      nameEl.textContent = randomName;
+      locationEl.textContent = randomLocation;
+      avatarEl.textContent = randomName.charAt(0);
+
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }
+
+    function scheduleNextToast() {
+      const minTime = 10000;
+      const maxTime = 22000;
+      const delay = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+
+      setTimeout(() => {
+        showSalesToast();
+        scheduleNextToast();
+      }, delay);
+    }
+
+    window.addEventListener('load', () => {
+      runAfterPageSettles(() => {
+        visitorLocationPromise = fetchVisitorLocation();
+        visitorLocationPromise.then((visitorLocation) => {
+          showSalesToast(visitorLocation);
+          scheduleNextToast();
+        });
+      }, 6500);
+    }, { once: true });
   </script>
 
 </body>
