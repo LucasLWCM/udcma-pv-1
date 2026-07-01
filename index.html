@@ -1668,10 +1668,12 @@ if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')|
        SEÇÃO: HERO
   ════════════════════════════════════ -->
   <section id="hero">
-    <img class="hero-bg hero-bg-desktop" src="img/hero/capadesktop-1.webp" alt="" width="1920" height="1080"
-      fetchpriority="high" decoding="async">
-    <img class="hero-bg hero-bg-mobile" src="img/hero/Capa-Mob_1_11zon.webp" alt="" width="1080" height="1350"
-      fetchpriority="high" decoding="async">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/hero/Capa-Mob_1_11zon.webp">
+      <source media="(min-width: 769px)" srcset="img/hero/capadesktop-1.webp">
+      <img class="hero-bg" src="img/hero/capadesktop-1.webp" alt="" width="1920" height="1080"
+        fetchpriority="high" decoding="async">
+    </picture>
     <div class="hero-overlay"></div>
 
     <div class="hero-content-wrapper">
