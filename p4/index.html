@@ -125,6 +125,17 @@
     }
 
     /* ── CTA Button ── */
+    @keyframes btnPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: var(--cta-glow);
+      }
+      50% {
+        transform: scale(1.045);
+        box-shadow: rgba(235, 192, 104, 0.45) 0px 0px 36px 0px, rgba(199, 158, 59, 0.3) 0px 0px 72px 0px;
+      }
+    }
+
     .btn-cta {
       display: inline-block;
       background: var(--cta-primary);
@@ -140,14 +151,17 @@
       cursor: pointer;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
       text-align: center;
+      animation: btnPulse 2s ease-in-out infinite;
     }
 
     .btn-cta:hover {
+      animation: none;
       transform: translateY(-2px);
       box-shadow: rgba(235, 192, 104, 0.35) 0px 0px 32px 0px, rgba(199, 158, 59, 0.25) 0px 0px 64px 0px;
     }
 
     .btn-cta:active {
+      animation: none;
       transform: translateY(0);
     }
 
