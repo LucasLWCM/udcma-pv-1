@@ -6,6 +6,8 @@ COPY p0/ /usr/share/nginx/html/p0/
 COPY p2/ /usr/share/nginx/html/p2/
 COPY p3/ /usr/share/nginx/html/p3/
 COPY p5/ /usr/share/nginx/html/p5/
+COPY p6/ /usr/share/nginx/html/p6/
+COPY p7/ /usr/share/nginx/html/p7/
 COPY img/ /usr/share/nginx/html/img/
 
 EXPOSE 80
