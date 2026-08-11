@@ -9,6 +9,7 @@ COPY p4/ /usr/share/nginx/html/p4/
 COPY p5/ /usr/share/nginx/html/p5/
 COPY p6/ /usr/share/nginx/html/p6/
 COPY p8/ /usr/share/nginx/html/p8/
+COPY p9/ /usr/share/nginx/html/p9/
 COPY img/ /usr/share/nginx/html/img/
 
 EXPOSE 80
