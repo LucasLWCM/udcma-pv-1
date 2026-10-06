@@ -2472,6 +2472,26 @@
     }, { once: true });
 
   </script>
+  <!-- UTM e SCK Tracker -->
+  <script>
+    (function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.toString() === '') return;
+
+      const links = document.querySelectorAll('a[href*="checkout.thebank.com.br"]');
+      links.forEach(link => {
+        try {
+          const linkUrl = new URL(link.href);
+          for (const [key, value] of urlParams.entries()) {
+            linkUrl.searchParams.set(key, value);
+          }
+          link.href = linkUrl.toString();
+        } catch (e) {
+          console.error("Erro ao atualizar UTMs no link:", e);
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
