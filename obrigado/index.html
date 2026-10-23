@@ -24,7 +24,9 @@
       --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -88,7 +90,7 @@
       color: #FFF;
       font-family: var(--font-heading);
       z-index: 2;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
       letter-spacing: 0.5px;
     }
 
@@ -117,7 +119,7 @@
       line-height: 1.5;
       margin-bottom: 32px;
       padding: 20px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255, 255, 255, 0.03);
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
@@ -133,13 +135,29 @@
     }
 
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(10px);
+      }
     }
 
     @keyframes btnPulse {
-      0%, 100% { transform: scale(1); box-shadow: rgba(235, 192, 104, 0.25) 0px 0px 24px 0px; }
-      50% { transform: scale(1.045); box-shadow: rgba(235, 192, 104, 0.45) 0px 0px 36px 0px; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: rgba(235, 192, 104, 0.25) 0px 0px 24px 0px;
+      }
+
+      50% {
+        transform: scale(1.045);
+        box-shadow: rgba(235, 192, 104, 0.45) 0px 0px 36px 0px;
+      }
     }
 
     .btn-cta {
@@ -170,21 +188,23 @@
 
 <body>
   <div class="container">
-    
+
     <div class="progress-wrapper">
       <div class="progress-text">CARREGANDO... <span id="progress-number">0</span>%</div>
       <div class="progress-bar" id="progress-bar"></div>
     </div>
 
     <h1>SUA COMPRA ESTÁ QUASE COMPLETA</h1>
-    
+
     <p class="subtitle">Seu acesso vai chegar a qualquer momento no seu Whatsapp.</p>
-    
-    <p class="warning">Mas antes você deve <strong>entrar no grupo de alunos</strong>. Por lá que envio os avisos de aulas, atualizações e tudo relacionado ao curso!</p>
+
+    <p class="warning">Mas antes você deve <strong>entrar no grupo de alunos</strong>. Por lá que envio os avisos de
+      aulas, atualizações e tudo relacionado ao curso!</p>
 
     <div class="pointers">👇👇</div>
 
-    <a href="https://chat.whatsapp.com/GBpVDnMc17bLQiHPu2Fwiw" class="btn-cta" target="_blank" rel="noopener noreferrer">
+    <a href="https://chat.whatsapp.com/JfbtubFwCiLAO1Tk6zP089" class="btn-cta" target="_blank"
+      rel="noopener noreferrer">
       ENTRAR NO GRUPO DE ALUNOS
     </a>
   </div>
@@ -193,11 +213,11 @@
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         document.getElementById('progress-bar').style.width = '95%';
-        
+
         let counter = 0;
         const numberEl = document.getElementById('progress-number');
         const interval = setInterval(() => {
-          if(counter >= 95) {
+          if (counter >= 95) {
             clearInterval(interval);
           } else {
             counter++;
