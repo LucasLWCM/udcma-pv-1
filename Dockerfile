@@ -11,9 +11,12 @@ COPY p6/ /usr/share/nginx/html/p6/
 COPY p7/ /usr/share/nginx/html/p7/
 COPY p8/ /usr/share/nginx/html/p8/
 COPY p9/ /usr/share/nginx/html/p9/
+COPY p11/ /usr/share/nginx/html/p11/
+COPY p12/ /usr/share/nginx/html/p12/
 COPY pe00/ /usr/share/nginx/html/pe00/
 COPY principal/ /usr/share/nginx/html/principal/
 COPY obrigado/ /usr/share/nginx/html/obrigado/
 COPY img/ /usr/share/nginx/html/img/
+COPY video/ /usr/share/nginx/html/video/
 
 EXPOSE 80
