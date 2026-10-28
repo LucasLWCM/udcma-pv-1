@@ -1,0 +1,2082 @@
+[
+  {
+    "path": "p12/assets/fallback_final_frame.jpg",
+    "size": 87279
+  },
+  {
+    "path": "p12/assets/fallback_final_frame.webp",
+    "size": 60682
+  },
+  {
+    "path": "p12/assets/fallback_final_frame_720.jpg",
+    "size": 39293
+  },
+  {
+    "path": "p12/assets/fallback_final_frame_720.webp",
+    "size": 22638
+  },
+  {
+    "path": "p12/assets/hero_1280_crf22.mp4",
+    "size": 748705
+  },
+  {
+    "path": "p12/assets/hero_1280_crf25.mp4",
+    "size": 529110
+  },
+  {
+    "path": "p12/assets/hero_1280_crf28.mp4",
+    "size": 379200
+  },
+  {
+    "path": "p12/assets/hero_1280_crf32.webm",
+    "size": 593299
+  },
+  {
+    "path": "p12/assets/hero_1280_crf36.webm",
+    "size": 470309
+  },
+  {
+    "path": "p12/assets/hero_1280_crf41.webm",
+    "size": 346100
+  },
+  {
+    "path": "p12/assets/hero_720_crf25.mp4",
+    "size": 230734
+  },
+  {
+    "path": "p12/assets/hero_720_crf28.mp4",
+    "size": 169762
+  },
+  {
+    "path": "p12/assets/hero_720_crf36.webm",
+    "size": 247142
+  },
+  {
+    "path": "p12/assets/hero_720_crf41.webm",
+    "size": 184904
+  },
+  {
+    "path": "p12/assets/poster_first_frame.jpg",
+    "size": 25566
+  },
+  {
+    "path": "p12/assets/poster_first_frame.webp",
+    "size": 14952
+  },
+  {
+    "path": "p12/assets/poster_first_frame_720.jpg",
+    "size": 12226
+  },
+  {
+    "path": "p12/assets/poster_first_frame_720.webp",
+    "size": 4838
+  },
+  {
+    "path": "p12/index.html",
+    "size": 329820
+  },
+  {
+    "path": "scratch/all_frames/f_001.png",
+    "size": 292722
+  },
+  {
+    "path": "scratch/all_frames/f_002.png",
+    "size": 323390
+  },
+  {
+    "path": "scratch/all_frames/f_003.png",
+    "size": 325653
+  },
+  {
+    "path": "scratch/all_frames/f_004.png",
+    "size": 329852
+  },
+  {
+    "path": "scratch/all_frames/f_005.png",
+    "size": 325199
+  },
+  {
+    "path": "scratch/all_frames/f_006.png",
+    "size": 347336
+  },
+  {
+    "path": "scratch/all_frames/f_007.png",
+    "size": 349990
+  },
+  {
+    "path": "scratch/all_frames/f_008.png",
+    "size": 354404
+  },
+  {
+    "path": "scratch/all_frames/f_009.png",
+    "size": 350263
+  },
+  {
+    "path": "scratch/all_frames/f_010.png",
+    "size": 369969
+  },
+  {
+    "path": "scratch/all_frames/f_011.png",
+    "size": 375295
+  },
+  {
+    "path": "scratch/all_frames/f_012.png",
+    "size": 380830
+  },
+  {
+    "path": "scratch/all_frames/f_013.png",
+    "size": 373825
+  },
+  {
+    "path": "scratch/all_frames/f_014.png",
+    "size": 391640
+  },
+  {
+    "path": "scratch/all_frames/f_015.png",
+    "size": 394892
+  },
+  {
+    "path": "scratch/all_frames/f_016.png",
+    "size": 399801
+  },
+  {
+    "path": "scratch/all_frames/f_017.png",
+    "size": 396677
+  },
+  {
+    "path": "scratch/all_frames/f_018.png",
+    "size": 410279
+  },
+  {
+    "path": "scratch/all_frames/f_019.png",
+    "size": 414638
+  },
+  {
+    "path": "scratch/all_frames/f_020.png",
+    "size": 418891
+  },
+  {
+    "path": "scratch/all_frames/f_021.png",
+    "size": 419595
+  },
+  {
+    "path": "scratch/all_frames/f_022.png",
+    "size": 431548
+  },
+  {
+    "path": "scratch/all_frames/f_023.png",
+    "size": 438022
+  },
+  {
+    "path": "scratch/all_frames/f_024.png",
+    "size": 441470
+  },
+  {
+    "path": "scratch/all_frames/f_025.png",
+    "size": 438322
+  },
+  {
+    "path": "scratch/all_frames/f_026.png",
+    "size": 454002
+  },
+  {
+    "path": "scratch/all_frames/f_027.png",
+    "size": 459467
+  },
+  {
+    "path": "scratch/all_frames/f_028.png",
+    "size": 462349
+  },
+  {
+    "path": "scratch/all_frames/f_029.png",
+    "size": 457866
+  },
+  {
+    "path": "scratch/all_frames/f_030.png",
+    "size": 471358
+  },
+  {
+    "path": "scratch/all_frames/f_031.png",
+    "size": 479572
+  },
+  {
+    "path": "scratch/all_frames/f_032.png",
+    "size": 481316
+  },
+  {
+    "path": "scratch/all_frames/f_033.png",
+    "size": 479692
+  },
+  {
+    "path": "scratch/all_frames/f_034.png",
+    "size": 487519
+  },
+  {
+    "path": "scratch/all_frames/f_035.png",
+    "size": 493703
+  },
+  {
+    "path": "scratch/all_frames/f_036.png",
+    "size": 495507
+  },
+  {
+    "path": "scratch/all_frames/f_037.png",
+    "size": 492826
+  },
+  {
+    "path": "scratch/all_frames/f_038.png",
+    "size": 500014
+  },
+  {
+    "path": "scratch/all_frames/f_039.png",
+    "size": 508692
+  },
+  {
+    "path": "scratch/all_frames/f_040.png",
+    "size": 512551
+  },
+  {
+    "path": "scratch/all_frames/f_041.png",
+    "size": 512196
+  },
+  {
+    "path": "scratch/all_frames/f_042.png",
+    "size": 523038
+  },
+  {
+    "path": "scratch/all_frames/f_043.png",
+    "size": 531983
+  },
+  {
+    "path": "scratch/all_frames/f_044.png",
+    "size": 534021
+  },
+  {
+    "path": "scratch/all_frames/f_045.png",
+    "size": 541998
+  },
+  {
+    "path": "scratch/all_frames/f_046.png",
+    "size": 542219
+  },
+  {
+    "path": "scratch/all_frames/f_047.png",
+    "size": 549670
+  },
+  {
+    "path": "scratch/all_frames/f_048.png",
+    "size": 532834
+  },
+  {
+    "path": "scratch/all_frames/f_049.png",
+    "size": 555187
+  },
+  {
+    "path": "scratch/all_frames/f_050.png",
+    "size": 551208
+  },
+  {
+    "path": "scratch/all_frames/f_051.png",
+    "size": 558373
+  },
+  {
+    "path": "scratch/all_frames/f_052.png",
+    "size": 529667
+  },
+  {
+    "path": "scratch/all_frames/f_053.png",
+    "size": 540768
+  },
+  {
+    "path": "scratch/all_frames/f_054.png",
+    "size": 455360
+  },
+  {
+    "path": "scratch/all_frames/f_055.png",
+    "size": 490962
+  },
+  {
+    "path": "scratch/all_frames/f_056.png",
+    "size": 481595
+  },
+  {
+    "path": "scratch/all_frames/f_057.png",
+    "size": 479216
+  },
+  {
+    "path": "scratch/all_frames/f_058.png",
+    "size": 450399
+  },
+  {
+    "path": "scratch/all_frames/f_059.png",
+    "size": 482951
+  },
+  {
+    "path": "scratch/all_frames/f_060.png",
+    "size": 481085
+  },
+  {
+    "path": "scratch/all_frames/f_061.png",
+    "size": 523800
+  },
+  {
+    "path": "scratch/all_frames/f_062.png",
+    "size": 519798
+  },
+  {
+    "path": "scratch/all_frames/f_063.png",
+    "size": 513761
+  },
+  {
+    "path": "scratch/all_frames/f_064.png",
+    "size": 490628
+  },
+  {
+    "path": "scratch/all_frames/f_065.png",
+    "size": 506807
+  },
+  {
+    "path": "scratch/all_frames/f_066.png",
+    "size": 500670
+  },
+  {
+    "path": "scratch/all_frames/f_067.png",
+    "size": 498045
+  },
+  {
+    "path": "scratch/all_frames/f_068.png",
+    "size": 490315
+  },
+  {
+    "path": "scratch/all_frames/f_069.png",
+    "size": 500325
+  },
+  {
+    "path": "scratch/all_frames/f_070.png",
+    "size": 502663
+  },
+  {
+    "path": "scratch/all_frames/f_071.png",
+    "size": 500035
+  },
+  {
+    "path": "scratch/all_frames/f_072.png",
+    "size": 498372
+  },
+  {
+    "path": "scratch/all_frames/f_073.png",
+    "size": 503159
+  },
+  {
+    "path": "scratch/all_frames/f_074.png",
+    "size": 505323
+  },
+  {
+    "path": "scratch/all_frames/f_075.png",
+    "size": 503945
+  },
+  {
+    "path": "scratch/all_frames/f_076.png",
+    "size": 504364
+  },
+  {
+    "path": "scratch/all_frames/f_077.png",
+    "size": 509756
+  },
+  {
+    "path": "scratch/all_frames/f_078.png",
+    "size": 513394
+  },
+  {
+    "path": "scratch/all_frames/f_079.png",
+    "size": 516251
+  },
+  {
+    "path": "scratch/all_frames/f_080.png",
+    "size": 515783
+  },
+  {
+    "path": "scratch/all_frames/f_081.png",
+    "size": 519643
+  },
+  {
+    "path": "scratch/all_frames/f_082.png",
+    "size": 520751
+  },
+  {
+    "path": "scratch/all_frames/f_083.png",
+    "size": 521265
+  },
+  {
+    "path": "scratch/all_frames/f_084.png",
+    "size": 518746
+  },
+  {
+    "path": "scratch/all_frames/f_085.png",
+    "size": 526650
+  },
+  {
+    "path": "scratch/all_frames/f_086.png",
+    "size": 529282
+  },
+  {
+    "path": "scratch/all_frames/f_087.png",
+    "size": 529567
+  },
+  {
+    "path": "scratch/all_frames/f_088.png",
+    "size": 528699
+  },
+  {
+    "path": "scratch/all_frames/f_089.png",
+    "size": 532529
+  },
+  {
+    "path": "scratch/all_frames/f_090.png",
+    "size": 534840
+  },
+  {
+    "path": "scratch/all_frames/f_091.png",
+    "size": 535485
+  },
+  {
+    "path": "scratch/all_frames/f_092.png",
+    "size": 533366
+  },
+  {
+    "path": "scratch/all_frames/f_093.png",
+    "size": 537705
+  },
+  {
+    "path": "scratch/all_frames/f_094.png",
+    "size": 538593
+  },
+  {
+    "path": "scratch/all_frames/f_095.png",
+    "size": 535989
+  },
+  {
+    "path": "scratch/all_frames/f_096.png",
+    "size": 534605
+  },
+  {
+    "path": "scratch/all_frames/f_097.png",
+    "size": 536076
+  },
+  {
+    "path": "scratch/all_frames/f_098.png",
+    "size": 536633
+  },
+  {
+    "path": "scratch/all_frames/f_099.png",
+    "size": 532698
+  },
+  {
+    "path": "scratch/all_frames/f_100.png",
+    "size": 524233
+  },
+  {
+    "path": "scratch/all_frames/f_101.png",
+    "size": 525117
+  },
+  {
+    "path": "scratch/all_frames/f_102.png",
+    "size": 521551
+  },
+  {
+    "path": "scratch/all_frames/f_103.png",
+    "size": 519159
+  },
+  {
+    "path": "scratch/all_frames/f_104.png",
+    "size": 515637
+  },
+  {
+    "path": "scratch/all_frames/f_105.png",
+    "size": 520810
+  },
+  {
+    "path": "scratch/all_frames/f_106.png",
+    "size": 518881
+  },
+  {
+    "path": "scratch/all_frames/f_107.png",
+    "size": 517037
+  },
+  {
+    "path": "scratch/all_frames/f_108.png",
+    "size": 512426
+  },
+  {
+    "path": "scratch/all_frames/f_109.png",
+    "size": 516395
+  },
+  {
+    "path": "scratch/all_frames/f_110.png",
+    "size": 513792
+  },
+  {
+    "path": "scratch/all_frames/f_111.png",
+    "size": 510596
+  },
+  {
+    "path": "scratch/all_frames/f_112.png",
+    "size": 501372
+  },
+  {
+    "path": "scratch/all_frames/f_113.png",
+    "size": 507993
+  },
+  {
+    "path": "scratch/all_frames/f_114.png",
+    "size": 507169
+  },
+  {
+    "path": "scratch/all_frames/f_115.png",
+    "size": 506921
+  },
+  {
+    "path": "scratch/all_frames/f_116.png",
+    "size": 503843
+  },
+  {
+    "path": "scratch/all_frames/f_117.png",
+    "size": 510266
+  },
+  {
+    "path": "scratch/all_frames/f_118.png",
+    "size": 509575
+  },
+  {
+    "path": "scratch/all_frames/f_119.png",
+    "size": 510047
+  },
+  {
+    "path": "scratch/all_frames/f_120.png",
+    "size": 507050
+  },
+  {
+    "path": "scratch/all_frames/f_121.png",
+    "size": 510364
+  },
+  {
+    "path": "scratch/all_frames/f_122.png",
+    "size": 510365
+  },
+  {
+    "path": "scratch/all_frames/f_123.png",
+    "size": 509831
+  },
+  {
+    "path": "scratch/all_frames/f_124.png",
+    "size": 508737
+  },
+  {
+    "path": "scratch/all_frames/f_125.png",
+    "size": 511565
+  },
+  {
+    "path": "scratch/all_frames/f_126.png",
+    "size": 512423
+  },
+  {
+    "path": "scratch/all_frames/f_127.png",
+    "size": 512487
+  },
+  {
+    "path": "scratch/all_frames/f_128.png",
+    "size": 508233
+  },
+  {
+    "path": "scratch/all_frames/f_129.png",
+    "size": 513695
+  },
+  {
+    "path": "scratch/all_frames/f_130.png",
+    "size": 514324
+  },
+  {
+    "path": "scratch/all_frames/f_131.png",
+    "size": 515914
+  },
+  {
+    "path": "scratch/all_frames/f_132.png",
+    "size": 514582
+  },
+  {
+    "path": "scratch/all_frames/f_133.png",
+    "size": 520968
+  },
+  {
+    "path": "scratch/all_frames/f_134.png",
+    "size": 520736
+  },
+  {
+    "path": "scratch/all_frames/f_135.png",
+    "size": 519403
+  },
+  {
+    "path": "scratch/all_frames/f_136.png",
+    "size": 516017
+  },
+  {
+    "path": "scratch/all_frames/f_137.png",
+    "size": 518767
+  },
+  {
+    "path": "scratch/all_frames/f_138.png",
+    "size": 519538
+  },
+  {
+    "path": "scratch/all_frames/f_139.png",
+    "size": 521029
+  },
+  {
+    "path": "scratch/all_frames/f_140.png",
+    "size": 520194
+  },
+  {
+    "path": "scratch/all_frames/f_141.png",
+    "size": 524657
+  },
+  {
+    "path": "scratch/all_frames/f_142.png",
+    "size": 525623
+  },
+  {
+    "path": "scratch/all_frames/f_143.png",
+    "size": 524025
+  },
+  {
+    "path": "scratch/all_frames/f_144.png",
+    "size": 520200
+  },
+  {
+    "path": "scratch/apply_d2_fix.js",
+    "size": 20301
+  },
+  {
+    "path": "scratch/apply_dobra10.py",
+    "size": 17361
+  },
+  {
+    "path": "scratch/apply_dobra11.py",
+    "size": 13752
+  },
+  {
+    "path": "scratch/apply_dobra7.py",
+    "size": 1729
+  },
+  {
+    "path": "scratch/apply_dobra8.py",
+    "size": 1683
+  },
+  {
+    "path": "scratch/apply_dobra9.py",
+    "size": 1694
+  },
+  {
+    "path": "scratch/apply_floating_cta.js",
+    "size": 12253
+  },
+  {
+    "path": "scratch/apply_reorder.py",
+    "size": 148
+  },
+  {
+    "path": "scratch/before_pain_390.png",
+    "size": 584868
+  },
+  {
+    "path": "scratch/build_table.py",
+    "size": 2956
+  },
+  {
+    "path": "scratch/calc_closing_contrast.py",
+    "size": 1294
+  },
+  {
+    "path": "scratch/calc_contrasts.js",
+    "size": 1413
+  },
+  {
+    "path": "scratch/calc_contrast_d7.py",
+    "size": 1844
+  },
+  {
+    "path": "scratch/calc_d11_weights.py",
+    "size": 1206
+  },
+  {
+    "path": "scratch/calc_d7_weights.py",
+    "size": 663
+  },
+  {
+    "path": "scratch/calc_d8_weights.py",
+    "size": 1512
+  },
+  {
+    "path": "scratch/calc_d9_weights.py",
+    "size": 1321
+  },
+  {
+    "path": "scratch/calc_weights.py",
+    "size": 1416
+  },
+  {
+    "path": "scratch/check_anchors.py",
+    "size": 312
+  },
+  {
+    "path": "scratch/check_anchors_all.py",
+    "size": 480
+  },
+  {
+    "path": "scratch/check_cards.py",
+    "size": 388
+  },
+  {
+    "path": "scratch/check_checkout_links.py",
+    "size": 304
+  },
+  {
+    "path": "scratch/check_contrast_flags.py",
+    "size": 510
+  },
+  {
+    "path": "scratch/check_css_deps.py",
+    "size": 476
+  },
+  {
+    "path": "scratch/check_cta_positions.mjs",
+    "size": 3192
+  },
+  {
+    "path": "scratch/check_d8_tags.py",
+    "size": 690
+  },
+  {
+    "path": "scratch/check_d9_tags.py",
+    "size": 692
+  },
+  {
+    "path": "scratch/check_details.js",
+    "size": 129
+  },
+  {
+    "path": "scratch/check_events.js",
+    "size": 517
+  },
+  {
+    "path": "scratch/check_faq_cta.mjs",
+    "size": 3333
+  },
+  {
+    "path": "scratch/check_for_who.mjs",
+    "size": 3522
+  },
+  {
+    "path": "scratch/check_guarantee_content.py",
+    "size": 208
+  },
+  {
+    "path": "scratch/check_h2.py",
+    "size": 677
+  },
+  {
+    "path": "scratch/check_images_props.py",
+    "size": 547
+  },
+  {
+    "path": "scratch/check_js_applied.py",
+    "size": 766
+  },
+  {
+    "path": "scratch/check_mockup.py",
+    "size": 434
+  },
+  {
+    "path": "scratch/check_names_b.py",
+    "size": 442
+  },
+  {
+    "path": "scratch/check_occurrences.py",
+    "size": 419
+  },
+  {
+    "path": "scratch/check_original_prints.py",
+    "size": 364
+  },
+  {
+    "path": "scratch/check_other_pages.py",
+    "size": 477
+  },
+  {
+    "path": "scratch/check_p12.js",
+    "size": 492
+  },
+  {
+    "path": "scratch/check_p12_pricing_css.py",
+    "size": 552
+  },
+  {
+    "path": "scratch/check_playwright.py",
+    "size": 1421
+  },
+  {
+    "path": "scratch/check_pos.py",
+    "size": 897
+  },
+  {
+    "path": "scratch/check_positions.js",
+    "size": 409
+  },
+  {
+    "path": "scratch/check_pricing_bounds.js",
+    "size": 473
+  },
+  {
+    "path": "scratch/check_remaining_links.js",
+    "size": 374
+  },
+  {
+    "path": "scratch/check_sections_of_ctas.js",
+    "size": 606
+  },
+  {
+    "path": "scratch/check_section_offsets.mjs",
+    "size": 2952
+  },
+  {
+    "path": "scratch/check_tag_balance.py",
+    "size": 1337
+  },
+  {
+    "path": "scratch/check_title_b.py",
+    "size": 255
+  },
+  {
+    "path": "scratch/check_toast.js",
+    "size": 287
+  },
+  {
+    "path": "scratch/check_untracked.js",
+    "size": 2398
+  },
+  {
+    "path": "scratch/check_vertical_order.mjs",
+    "size": 3373
+  },
+  {
+    "path": "scratch/compare_bcr.mjs",
+    "size": 3322
+  },
+  {
+    "path": "scratch/compare_cards.js",
+    "size": 1385
+  },
+  {
+    "path": "scratch/convert_prints.py",
+    "size": 1707
+  },
+  {
+    "path": "scratch/copy_prod_videos.py",
+    "size": 380
+  },
+  {
+    "path": "scratch/current_block_a.html",
+    "size": 5206
+  },
+  {
+    "path": "scratch/current_block_b.html",
+    "size": 35209
+  },
+  {
+    "path": "scratch/debug_bounds.mjs",
+    "size": 3503
+  },
+  {
+    "path": "scratch/debug_floating_load.mjs",
+    "size": 2840
+  },
+  {
+    "path": "scratch/diagnose_before.json",
+    "size": 3139
+  },
+  {
+    "path": "scratch/diagnose_pain.mjs",
+    "size": 4506
+  },
+  {
+    "path": "scratch/dobra2_css.css",
+    "size": 9450
+  },
+  {
+    "path": "scratch/dobra2_current_css.css",
+    "size": 0
+  },
+  {
+    "path": "scratch/dobra2_current_html.html",
+    "size": 6082
+  },
+  {
+    "path": "scratch/dobra7_css.py",
+    "size": 15347
+  },
+  {
+    "path": "scratch/dobra7_html.py",
+    "size": 7437
+  },
+  {
+    "path": "scratch/dobra7_js.py",
+    "size": 5096
+  },
+  {
+    "path": "scratch/dobra8_css.py",
+    "size": 6836
+  },
+  {
+    "path": "scratch/dobra8_html.py",
+    "size": 5687
+  },
+  {
+    "path": "scratch/dobra8_js.py",
+    "size": 3817
+  },
+  {
+    "path": "scratch/dobra9_css.py",
+    "size": 8427
+  },
+  {
+    "path": "scratch/dobra9_html.py",
+    "size": 7124
+  },
+  {
+    "path": "scratch/dobra9_js.py",
+    "size": 6074
+  },
+  {
+    "path": "scratch/do_swap.py",
+    "size": 20727
+  },
+  {
+    "path": "scratch/dump_blocks.py",
+    "size": 1183
+  },
+  {
+    "path": "scratch/elderly_audit.json",
+    "size": 97862
+  },
+  {
+    "path": "scratch/elderly_table.md",
+    "size": 9126
+  },
+  {
+    "path": "scratch/eval_variants.py",
+    "size": 1149
+  },
+  {
+    "path": "scratch/execute_swap.py",
+    "size": 10168
+  },
+  {
+    "path": "scratch/extract_cards.js",
+    "size": 443
+  },
+  {
+    "path": "scratch/extract_d2.js",
+    "size": 830
+  },
+  {
+    "path": "scratch/extract_keyframes.py",
+    "size": 763
+  },
+  {
+    "path": "scratch/extract_sections.py",
+    "size": 2026
+  },
+  {
+    "path": "scratch/fallback_raw.png",
+    "size": 456381
+  },
+  {
+    "path": "scratch/find_all_closing.py",
+    "size": 379
+  },
+  {
+    "path": "scratch/find_all_ctas.js",
+    "size": 785
+  },
+  {
+    "path": "scratch/find_all_images.py",
+    "size": 239
+  },
+  {
+    "path": "scratch/find_all_testimonials_imgs.py",
+    "size": 595
+  },
+  {
+    "path": "scratch/find_bbox.py",
+    "size": 1367
+  },
+  {
+    "path": "scratch/find_btn_refs.py",
+    "size": 229
+  },
+  {
+    "path": "scratch/find_click_listeners.js",
+    "size": 354
+  },
+  {
+    "path": "scratch/find_css_d6.py",
+    "size": 682
+  },
+  {
+    "path": "scratch/find_d6_script.py",
+    "size": 535
+  },
+  {
+    "path": "scratch/find_fixed.js",
+    "size": 334
+  },
+  {
+    "path": "scratch/find_guarantee_css.js",
+    "size": 278
+  },
+  {
+    "path": "scratch/find_lines.py",
+    "size": 463
+  },
+  {
+    "path": "scratch/find_matches_p12.py",
+    "size": 524
+  },
+  {
+    "path": "scratch/find_next_css.py",
+    "size": 600
+  },
+  {
+    "path": "scratch/find_orig_pricing_css.py",
+    "size": 597
+  },
+  {
+    "path": "scratch/find_p12_pricing_css_bounds.py",
+    "size": 390
+  },
+  {
+    "path": "scratch/find_pain.js",
+    "size": 597
+  },
+  {
+    "path": "scratch/find_phone_extent.py",
+    "size": 1139
+  },
+  {
+    "path": "scratch/find_price_css.py",
+    "size": 323
+  },
+  {
+    "path": "scratch/find_rims.py",
+    "size": 1406
+  },
+  {
+    "path": "scratch/find_rotation_bounds.py",
+    "size": 833
+  },
+  {
+    "path": "scratch/find_sections.js",
+    "size": 472
+  },
+  {
+    "path": "scratch/find_sources.py",
+    "size": 238
+  },
+  {
+    "path": "scratch/find_title_css.py",
+    "size": 1120
+  },
+  {
+    "path": "scratch/find_title_lines.py",
+    "size": 571
+  },
+  {
+    "path": "scratch/frames/frame_00_first.png",
+    "size": 292722
+  },
+  {
+    "path": "scratch/frames/frame_01_horiz.png",
+    "size": 419595
+  },
+  {
+    "path": "scratch/frames/frame_02_rotating.png",
+    "size": 512551
+  },
+  {
+    "path": "scratch/frames/frame_03_list.png",
+    "size": 523800
+  },
+  {
+    "path": "scratch/frames/frame_04_playing.png",
+    "size": 516395
+  },
+  {
+    "path": "scratch/frames/frame_05_last.png",
+    "size": 520200
+  },
+  {
+    "path": "scratch/generate_markdown_table.py",
+    "size": 4599
+  },
+  {
+    "path": "scratch/generate_poster_fallback.py",
+    "size": 1832
+  },
+  {
+    "path": "scratch/generate_ring.py",
+    "size": 899
+  },
+  {
+    "path": "scratch/generate_variants.py",
+    "size": 3612
+  },
+  {
+    "path": "scratch/inspect_4_titles_details.py",
+    "size": 1053
+  },
+  {
+    "path": "scratch/inspect_a_structure.py",
+    "size": 476
+  },
+  {
+    "path": "scratch/inspect_blocks.py",
+    "size": 517
+  },
+  {
+    "path": "scratch/inspect_boundaries.js",
+    "size": 1294
+  },
+  {
+    "path": "scratch/inspect_boundaries.py",
+    "size": 809
+  },
+  {
+    "path": "scratch/inspect_b_structure.py",
+    "size": 436
+  },
+  {
+    "path": "scratch/inspect_closing.py",
+    "size": 475
+  },
+  {
+    "path": "scratch/inspect_closing_css.py",
+    "size": 507
+  },
+  {
+    "path": "scratch/inspect_css.py",
+    "size": 814
+  },
+  {
+    "path": "scratch/inspect_css_bounds.py",
+    "size": 468
+  },
+  {
+    "path": "scratch/inspect_css_for_who.py",
+    "size": 390
+  },
+  {
+    "path": "scratch/inspect_css_slice.py",
+    "size": 367
+  },
+  {
+    "path": "scratch/inspect_d6.py",
+    "size": 410
+  },
+  {
+    "path": "scratch/inspect_depoimentos.py",
+    "size": 319
+  },
+  {
+    "path": "scratch/inspect_dividers.py",
+    "size": 399
+  },
+  {
+    "path": "scratch/inspect_each_frame.py",
+    "size": 503
+  },
+  {
+    "path": "scratch/inspect_end_sections.js",
+    "size": 737
+  },
+  {
+    "path": "scratch/inspect_faq.js",
+    "size": 191
+  },
+  {
+    "path": "scratch/inspect_final_cta.js",
+    "size": 273
+  },
+  {
+    "path": "scratch/inspect_fonts.py",
+    "size": 458
+  },
+  {
+    "path": "scratch/inspect_forwho_bounds.py",
+    "size": 347
+  },
+  {
+    "path": "scratch/inspect_forwho_html.py",
+    "size": 390
+  },
+  {
+    "path": "scratch/inspect_for_who.py",
+    "size": 299
+  },
+  {
+    "path": "scratch/inspect_guarantee.py",
+    "size": 755
+  },
+  {
+    "path": "scratch/inspect_guarantee_context.py",
+    "size": 265
+  },
+  {
+    "path": "scratch/inspect_item3.py",
+    "size": 425
+  },
+  {
+    "path": "scratch/inspect_li_for_who.py",
+    "size": 190
+  },
+  {
+    "path": "scratch/inspect_load.mjs",
+    "size": 2987
+  },
+  {
+    "path": "scratch/inspect_next_comm.py",
+    "size": 308
+  },
+  {
+    "path": "scratch/inspect_original_titles.py",
+    "size": 1124
+  },
+  {
+    "path": "scratch/inspect_orig_d7.py",
+    "size": 892
+  },
+  {
+    "path": "scratch/inspect_orig_fonts.py",
+    "size": 1110
+  },
+  {
+    "path": "scratch/inspect_orig_head_css.py",
+    "size": 625
+  },
+  {
+    "path": "scratch/inspect_orig_rules.py",
+    "size": 442
+  },
+  {
+    "path": "scratch/inspect_p12_4_titles.py",
+    "size": 1070
+  },
+  {
+    "path": "scratch/inspect_p12_d7.py",
+    "size": 1108
+  },
+  {
+    "path": "scratch/inspect_p12_guarantee.py",
+    "size": 709
+  },
+  {
+    "path": "scratch/inspect_p12_scripts.py",
+    "size": 519
+  },
+  {
+    "path": "scratch/inspect_p12_social.py",
+    "size": 654
+  },
+  {
+    "path": "scratch/inspect_p12_target_titles.py",
+    "size": 1151
+  },
+  {
+    "path": "scratch/inspect_pain.py",
+    "size": 519
+  },
+  {
+    "path": "scratch/inspect_parents.js",
+    "size": 218
+  },
+  {
+    "path": "scratch/inspect_phone_bounds.py",
+    "size": 1057
+  },
+  {
+    "path": "scratch/inspect_pricing_context.py",
+    "size": 518
+  },
+  {
+    "path": "scratch/inspect_p_g.js",
+    "size": 465
+  },
+  {
+    "path": "scratch/inspect_root.py",
+    "size": 188
+  },
+  {
+    "path": "scratch/inspect_script.js",
+    "size": 328
+  },
+  {
+    "path": "scratch/inspect_sections_order.py",
+    "size": 472
+  },
+  {
+    "path": "scratch/inspect_section_boundaries.py",
+    "size": 588
+  },
+  {
+    "path": "scratch/inspect_social_proof.py",
+    "size": 839
+  },
+  {
+    "path": "scratch/inspect_t1_t2_p12.py",
+    "size": 1231
+  },
+  {
+    "path": "scratch/inspect_t1_t2_tags.py",
+    "size": 689
+  },
+  {
+    "path": "scratch/inspect_titles.py",
+    "size": 916
+  },
+  {
+    "path": "scratch/inspect_titles_css_exact.py",
+    "size": 1014
+  },
+  {
+    "path": "scratch/lh_d11.json",
+    "size": 817782
+  },
+  {
+    "path": "scratch/lighthouse_reordered.json",
+    "size": 788852
+  },
+  {
+    "path": "scratch/lighthouse_report.json",
+    "size": 808388
+  },
+  {
+    "path": "scratch/list_all_links_buttons.js",
+    "size": 896
+  },
+  {
+    "path": "scratch/list_sections_order.js",
+    "size": 304
+  },
+  {
+    "path": "scratch/list_testimonials_files.py",
+    "size": 131
+  },
+  {
+    "path": "scratch/locate_d2_parts.js",
+    "size": 710
+  },
+  {
+    "path": "scratch/measure_dist.js",
+    "size": 194
+  },
+  {
+    "path": "scratch/measure_dist.mjs",
+    "size": 3110
+  },
+  {
+    "path": "scratch/measure_layout.html",
+    "size": 1417
+  },
+  {
+    "path": "scratch/measure_sections.mjs",
+    "size": 3481
+  },
+  {
+    "path": "scratch/measure_test.py",
+    "size": 1632
+  },
+  {
+    "path": "scratch/parse_lh.py",
+    "size": 929
+  },
+  {
+    "path": "scratch/parse_lh_reordered.py",
+    "size": 932
+  },
+  {
+    "path": "scratch/poster_raw.png",
+    "size": 283042
+  },
+  {
+    "path": "scratch/preview_dobra10_animated.html",
+    "size": 15473
+  },
+  {
+    "path": "scratch/print_orig_pricing.py",
+    "size": 562
+  },
+  {
+    "path": "scratch/read_lh.py",
+    "size": 526
+  },
+  {
+    "path": "scratch/read_lh_d11.py",
+    "size": 515
+  },
+  {
+    "path": "scratch/read_pricing_css.py",
+    "size": 194
+  },
+  {
+    "path": "scratch/real_after_1200.png",
+    "size": 16605
+  },
+  {
+    "path": "scratch/real_after_360.png",
+    "size": 216790
+  },
+  {
+    "path": "scratch/real_after_390.png",
+    "size": 219621
+  },
+  {
+    "path": "scratch/real_after_768.png",
+    "size": 78740
+  },
+  {
+    "path": "scratch/real_before_360.png",
+    "size": 221355
+  },
+  {
+    "path": "scratch/real_before_390.png",
+    "size": 223294
+  },
+  {
+    "path": "scratch/real_before_768.png",
+    "size": 78740
+  },
+  {
+    "path": "scratch/ref_horiz.png",
+    "size": 358241
+  },
+  {
+    "path": "scratch/ref_list.png",
+    "size": 474552
+  },
+  {
+    "path": "scratch/ref_playing.png",
+    "size": 459000
+  },
+  {
+    "path": "scratch/remove_play_pause.py",
+    "size": 5225
+  },
+  {
+    "path": "scratch/reorder_test.py",
+    "size": 7746
+  },
+  {
+    "path": "scratch/run_diagnose_before.mjs",
+    "size": 5337
+  },
+  {
+    "path": "scratch/run_elderly_audit.mjs",
+    "size": 9595
+  },
+  {
+    "path": "scratch/run_real_session.mjs",
+    "size": 5215
+  },
+  {
+    "path": "scratch/sample_frames_y.py",
+    "size": 520
+  },
+  {
+    "path": "scratch/search_closing_border.py",
+    "size": 340
+  },
+  {
+    "path": "scratch/search_depoimentos.py",
+    "size": 457
+  },
+  {
+    "path": "scratch/show_transitions.py",
+    "size": 734
+  },
+  {
+    "path": "scratch/summarize_audit.py",
+    "size": 857
+  },
+  {
+    "path": "scratch/table_data.json",
+    "size": 84688
+  },
+  {
+    "path": "scratch/test_browser_measurements.mjs",
+    "size": 3846
+  },
+  {
+    "path": "scratch/test_closing.html",
+    "size": 11669
+  },
+  {
+    "path": "scratch/test_crops.py",
+    "size": 715
+  },
+  {
+    "path": "scratch/test_crop_660x960/f1.png",
+    "size": 276871
+  },
+  {
+    "path": "scratch/test_crop_660x960/f144.png",
+    "size": 440945
+  },
+  {
+    "path": "scratch/test_crop_660x960/f45.png",
+    "size": 486286
+  },
+  {
+    "path": "scratch/test_crop_680x960/f1.png",
+    "size": 279182
+  },
+  {
+    "path": "scratch/test_crop_680x960/f144.png",
+    "size": 449125
+  },
+  {
+    "path": "scratch/test_crop_680x960/f45.png",
+    "size": 493974
+  },
+  {
+    "path": "scratch/test_crop_680x980/f1.png",
+    "size": 279738
+  },
+  {
+    "path": "scratch/test_crop_680x980/f144.png",
+    "size": 454546
+  },
+  {
+    "path": "scratch/test_crop_680x980/f45.png",
+    "size": 497122
+  },
+  {
+    "path": "scratch/test_d2_fix.html",
+    "size": 27568
+  },
+  {
+    "path": "scratch/test_d2_fix.py",
+    "size": 19360
+  },
+  {
+    "path": "scratch/test_flex_stats.html",
+    "size": 2716
+  },
+  {
+    "path": "scratch/test_guarantee_layout.html",
+    "size": 8970
+  },
+  {
+    "path": "scratch/test_io.mjs",
+    "size": 4033
+  },
+  {
+    "path": "scratch/test_links_order.mjs",
+    "size": 3252
+  },
+  {
+    "path": "scratch/test_offsets.mjs",
+    "size": 2695
+  },
+  {
+    "path": "scratch/test_past_first_directly.mjs",
+    "size": 3264
+  },
+  {
+    "path": "scratch/test_reordered.html",
+    "size": 316046
+  },
+  {
+    "path": "scratch/test_stress.mjs",
+    "size": 5886
+  },
+  {
+    "path": "scratch/track_all_frames.py",
+    "size": 1304
+  },
+  {
+    "path": "scratch/update_floating_script.js",
+    "size": 3775
+  },
+  {
+    "path": "scratch/update_price_font.py",
+    "size": 2038
+  },
+  {
+    "path": "scratch/validate_dobra7_copy.py",
+    "size": 2824
+  },
+  {
+    "path": "scratch/validate_prohibitions.py",
+    "size": 778
+  },
+  {
+    "path": "scratch/validate_syntax.js",
+    "size": 698
+  },
+  {
+    "path": "scratch/verify_after.mjs",
+    "size": 6022
+  },
+  {
+    "path": "scratch/verify_and_backup.js",
+    "size": 1137
+  },
+  {
+    "path": "scratch/verify_d8_copy.py",
+    "size": 1069
+  },
+  {
+    "path": "scratch/verify_d9_copy.py",
+    "size": 1610
+  },
+  {
+    "path": "scratch/verify_dobra10_integrity.py",
+    "size": 2144
+  },
+  {
+    "path": "scratch/verify_dobra11_integrity.py",
+    "size": 2509
+  },
+  {
+    "path": "scratch/verify_floating_cta.mjs",
+    "size": 6437
+  },
+  {
+    "path": "scratch/verify_parity.js",
+    "size": 1319
+  },
+  {
+    "path": "scratch/verify_reorder.py",
+    "size": 2705
+  },
+  {
+    "path": "scratch/verify_swap.py",
+    "size": 2844
+  },
+  {
+    "path": "scratch/verify_timer_identical.py",
+    "size": 954
+  },
+  {
+    "path": "scratch/__pycache__/dobra7_css.cpython-311.pyc",
+    "size": 15014
+  },
+  {
+    "path": "scratch/__pycache__/dobra7_html.cpython-311.pyc",
+    "size": 7644
+  },
+  {
+    "path": "scratch/__pycache__/dobra7_js.cpython-311.pyc",
+    "size": 5301
+  },
+  {
+    "path": "scratch/__pycache__/dobra8_css.cpython-311.pyc",
+    "size": 7042
+  },
+  {
+    "path": "scratch/__pycache__/dobra8_html.cpython-311.pyc",
+    "size": 5894
+  },
+  {
+    "path": "scratch/__pycache__/dobra8_js.cpython-311.pyc",
+    "size": 4022
+  },
+  {
+    "path": "scratch/__pycache__/dobra9_css.cpython-311.pyc",
+    "size": 8633
+  },
+  {
+    "path": "scratch/__pycache__/dobra9_html.cpython-311.pyc",
+    "size": 7331
+  },
+  {
+    "path": "scratch/__pycache__/dobra9_js.cpython-311.pyc",
+    "size": 6279
+  },
+  {
+    "path": "video/frames_eval/av1_680p_crf32/horiz.png",
+    "size": 332734
+  },
+  {
+    "path": "video/frames_eval/av1_680p_crf32/list.png",
+    "size": 398701
+  },
+  {
+    "path": "video/frames_eval/av1_680p_crf32/playing.png",
+    "size": 343102
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf23/horiz.png",
+    "size": 234634
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf23/list.png",
+    "size": 306750
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf23/playing.png",
+    "size": 292092
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf26/horiz.png",
+    "size": 227045
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf26/list.png",
+    "size": 303716
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf26/playing.png",
+    "size": 290641
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf29/horiz.png",
+    "size": 216506
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf29/list.png",
+    "size": 306549
+  },
+  {
+    "path": "video/frames_eval/mp4_540p_crf29/playing.png",
+    "size": 294955
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf23/horiz.png",
+    "size": 326917
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf23/list.png",
+    "size": 430692
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf23/playing.png",
+    "size": 417506
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf26/horiz.png",
+    "size": 312907
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf26/list.png",
+    "size": 425495
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf26/playing.png",
+    "size": 412159
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf29/horiz.png",
+    "size": 306990
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf29/list.png",
+    "size": 421719
+  },
+  {
+    "path": "video/frames_eval/mp4_680p_crf29/playing.png",
+    "size": 411825
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf33/horiz.png",
+    "size": 223121
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf33/list.png",
+    "size": 255455
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf33/playing.png",
+    "size": 227756
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf38/horiz.png",
+    "size": 221554
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf38/list.png",
+    "size": 262439
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf38/playing.png",
+    "size": 223742
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf42/horiz.png",
+    "size": 219279
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf42/list.png",
+    "size": 263042
+  },
+  {
+    "path": "video/frames_eval/webm_540p_crf42/playing.png",
+    "size": 219784
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf33/horiz.png",
+    "size": 316282
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf33/list.png",
+    "size": 359231
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf33/playing.png",
+    "size": 319597
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf38/horiz.png",
+    "size": 313986
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf38/list.png",
+    "size": 363162
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf38/playing.png",
+    "size": 310629
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf42/horiz.png",
+    "size": 311647
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf42/list.png",
+    "size": 365683
+  },
+  {
+    "path": "video/frames_eval/webm_680p_crf42/playing.png",
+    "size": 305154
+  },
+  {
+    "path": "video/phone_fallback.jpg",
+    "size": 69401
+  },
+  {
+    "path": "video/phone_fallback.webp",
+    "size": 47872
+  },
+  {
+    "path": "video/phone_members.mp4",
+    "size": 654306
+  },
+  {
+    "path": "video/phone_members.webm",
+    "size": 621214
+  },
+  {
+    "path": "video/phone_members_mob.mp4",
+    "size": 474444
+  },
+  {
+    "path": "video/phone_members_mob.webm",
+    "size": 455988
+  },
+  {
+    "path": "video/phone_poster.jpg",
+    "size": 62432
+  },
+  {
+    "path": "video/phone_poster.webp",
+    "size": 43018
+  },
+  {
+    "path": "video/variants/phone_540p_crf23.mp4",
+    "size": 663258
+  },
+  {
+    "path": "video/variants/phone_540p_crf26.mp4",
+    "size": 474444
+  },
+  {
+    "path": "video/variants/phone_540p_crf29.mp4",
+    "size": 345878
+  },
+  {
+    "path": "video/variants/phone_540p_crf33.webm",
+    "size": 626734
+  },
+  {
+    "path": "video/variants/phone_540p_crf38.webm",
+    "size": 455988
+  },
+  {
+    "path": "video/variants/phone_540p_crf42.webm",
+    "size": 353805
+  },
+  {
+    "path": "video/variants/phone_680p_crf23.mp4",
+    "size": 929319
+  },
+  {
+    "path": "video/variants/phone_680p_crf26.mp4",
+    "size": 654306
+  },
+  {
+    "path": "video/variants/phone_680p_crf29.mp4",
+    "size": 474621
+  },
+  {
+    "path": "video/variants/phone_680p_crf32.mp4",
+    "size": 827495
+  },
+  {
+    "path": "video/variants/phone_680p_crf33.webm",
+    "size": 877196
+  },
+  {
+    "path": "video/variants/phone_680p_crf38.webm",
+    "size": 621214
+  },
+  {
+    "path": "video/variants/phone_680p_crf42.webm",
+    "size": 479874
+  },
+  {
+    "path": "img/bonus/Capa_plano_roteiro_estoico.png",
+    "size": 2502014
+  },
+  {
+    "path": "img/bonus/Foto_perfil.jpg",
+    "size": 4261
+  },
+  {
+    "path": "img/bonus/Fundo_noites_portico.png",
+    "size": 2416379
+  },
+  {
+    "path": "img/bonus/Roteiro_estoico.png",
+    "size": 2756472
+  },
+  {
+    "path": "img/bonus/estoico_campo.jpg",
+    "size": 27627
+  },
+  {
+    "path": "img/bonus/estoico_campo.webp",
+    "size": 23234
+  },
+  {
+    "path": "img/bonus/estoico_campo_2x.webp",
+    "size": 72300
+  },
+  {
+    "path": "img/bonus/img2_arte_estoico_em_campo.png",
+    "size": 2027507
+  },
+  {
+    "path": "img/bonus/noites_portico.jpg",
+    "size": 49022
+  },
+  {
+    "path": "img/bonus/noites_portico.webp",
+    "size": 36744
+  },
+  {
+    "path": "img/bonus/noites_portico_2x.webp",
+    "size": 127276
+  },
+  {
+    "path": "img/bonus/rafa_avatar.jpg",
+    "size": 2819
+  },
+  {
+    "path": "img/bonus/rafa_avatar.webp",
+    "size": 1964
+  },
+  {
+    "path": "img/bonus/rafa_avatar_2x.webp",
+    "size": 4420
+  },
+  {
+    "path": "img/bonus/roteiro_capa.jpg",
+    "size": 53012
+  },
+  {
+    "path": "img/bonus/roteiro_capa.webp",
+    "size": 48926
+  },
+  {
+    "path": "img/bonus/roteiro_capa_2x.webp",
+    "size": 186352
+  },
+  {
+    "path": "img/hero/Aniamacao_h1.mp4",
+    "size": 1319972
+  },
+  {
+    "path": "img/ref/video_ref.mp4",
+    "size": 2199825
+  },
+  {
+    "path": "img/testimonials/fabio_alencar.jpg",
+    "size": 1952
+  },
+  {
+    "path": "img/testimonials/fabio_alencar.webp",
+    "size": 1228
+  },
+  {
+    "path": "img/testimonials/fabio_alencar_2x.webp",
+    "size": 2168
+  },
+  {
+    "path": "img/testimonials/sp_1.webp",
+    "size": 28624
+  },
+  {
+    "path": "img/testimonials/sp_1_2x.webp",
+    "size": 77228
+  },
+  {
+    "path": "img/testimonials/sp_2.webp",
+    "size": 31684
+  },
+  {
+    "path": "img/testimonials/sp_2_2x.webp",
+    "size": 79154
+  },
+  {
+    "path": "img/testimonials/sp_3.webp",
+    "size": 35900
+  },
+  {
+    "path": "img/testimonials/sp_3_2x.webp",
+    "size": 90136
+  },
+  {
+    "path": "img/testimonials/sp_4.webp",
+    "size": 29340
+  },
+  {
+    "path": "img/testimonials/sp_4_2x.webp",
+    "size": 68928
+  },
+  {
+    "path": "img/testimonials/sp_5.webp",
+    "size": 33950
+  },
+  {
+    "path": "img/testimonials/sp_5_2x.webp",
+    "size": 84110
+  }
+]

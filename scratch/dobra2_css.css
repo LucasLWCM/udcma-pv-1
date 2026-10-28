@@ -1,0 +1,366 @@
+/* ── Seção Dor / Ciclo (P12 - Dobra 2) ── */
+    #pain {
+      position: relative;
+      background: #030303;
+      padding: clamp(64px, 8vw, 108px) 0;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    /* Brilho bem leve cor de brasa atrás dos cards */
+    .pain-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 900px;
+      height: 700px;
+      background: radial-gradient(ellipse at center, rgba(212, 114, 28, 0.12) 0%, rgba(180, 70, 10, 0.04) 50%, rgba(3, 3, 3, 0) 75%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .pain-container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Título em fonte serifada (Cormorant Garamond) */
+    .pain-title {
+      font-family: var(--font-heading);
+      font-size: clamp(23px, 3.8vw, 36px);
+      font-weight: 700;
+      color: #FFFFFF;
+      text-align: center;
+      line-height: 1.28;
+      letter-spacing: -0.01em;
+      margin: 0 auto clamp(36px, 5vw, 56px);
+      max-width: 660px;
+      text-wrap: balance;
+    }
+
+    /* Wrapper com trilha da timeline e o ciclo infinito */
+    .pain-timeline-wrapper {
+      position: relative;
+      padding-left: 56px;
+    }
+
+    /* Container SVG da timeline e ciclo milimetricamente conectado */
+    .pain-cycle-svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 56px;
+      height: 100%;
+      overflow: visible;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Trilha descendente base (dim) */
+    .svg-track {
+      stroke: rgba(199, 158, 59, 0.22);
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    /* Preenchimento ativo descendente (ilumina conforme os cards entram) */
+    .svg-fill {
+      stroke: #FFC107;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.8));
+      transition: stroke-dashoffset 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Ramos horizontais de conexão física entre o círculo e a borda do card */
+    .svg-branch {
+      stroke: rgba(199, 158, 59, 0.3);
+      stroke-width: 2;
+      stroke-linecap: round;
+      transition: stroke 0.4s ease, filter 0.4s ease;
+    }
+
+    .svg-branch.is-active {
+      stroke: #FFC107;
+      filter: drop-shadow(0 0 6px rgba(255, 193, 7, 0.9));
+    }
+
+    /* Linha de retorno do ciclo (curva embaixo do card 6, sobe e conecta no card 1) */
+    .svg-loop-line {
+      stroke: rgba(199, 158, 59, 0.32);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.6s ease, filter 0.6s ease;
+    }
+
+    .svg-loop-arrow {
+      fill: rgba(199, 158, 59, 0.45);
+      transition: fill 0.6s ease, filter 0.6s ease;
+    }
+
+    /* Quando o ciclo fecha (último card visível) */
+    .pain-timeline-wrapper.cycle-closed .svg-loop-line {
+      stroke: #FFC107;
+      stroke-dasharray: 6 5;
+      filter: drop-shadow(0 0 6px rgba(255, 193, 7, 0.75));
+      animation: loopFlow 1.6s linear infinite;
+    }
+
+    .pain-timeline-wrapper.cycle-closed .svg-loop-arrow {
+      fill: #FFC107;
+      filter: drop-shadow(0 0 8px #FFC107);
+    }
+
+    @keyframes loopFlow {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: -22;
+      }
+    }
+
+    /* Nós luminosos circulares perfeitamente centrados */
+    .svg-node-halo {
+      fill: none;
+      stroke: transparent;
+      stroke-width: 1.5;
+      transition: stroke 0.35s ease;
+    }
+
+    .svg-node-bg {
+      fill: #12100E;
+      stroke: rgba(199, 158, 59, 0.45);
+      stroke-width: 1.8;
+      transition: fill 0.35s ease, stroke 0.35s ease, filter 0.35s ease;
+    }
+
+    .svg-node-core {
+      fill: rgba(199, 158, 59, 0.45);
+      transition: fill 0.35s ease, filter 0.35s ease, r 0.35s ease;
+    }
+
+    .svg-node-wrap.is-active .svg-node-bg {
+      fill: #1A160E;
+      stroke: #FFC107;
+      filter: drop-shadow(0 0 6px rgba(255, 193, 7, 0.6));
+    }
+
+    .svg-node-wrap.is-active .svg-node-core {
+      fill: #FFC107;
+      filter: drop-shadow(0 0 6px #FFC107);
+      r: 4.5;
+    }
+
+    .svg-node-wrap.is-active .svg-node-halo {
+      stroke: rgba(255, 193, 7, 0.35);
+    }
+
+    /* Lista de cards */
+    .pain-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Card escuro */
+    .pain-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Interior do card escuro com borda fina dourada e cantos pouco arredondados */
+    .pain-card-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 20px 22px;
+      background: linear-gradient(145deg, #12100E 0%, #0A0908 100%);
+      border: 1px solid rgba(199, 158, 59, 0.22);
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pain-card:hover .pain-card-inner {
+      border-color: rgba(235, 192, 104, 0.55);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(212, 114, 28, 0.16);
+    }
+
+    .pain-card.is-visible .pain-card-inner {
+      border-color: rgba(199, 158, 59, 0.35);
+    }
+
+    /* Ícone em SVG linear com traço e tamanho dourado idêntico */
+    .pain-icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background: rgba(235, 192, 104, 0.08);
+      border: 1px solid rgba(235, 192, 104, 0.2);
+      color: #EBC068;
+    }
+
+    .pain-icon {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    /* Texto do card: sem serifa, >= 16px, bom espaçamento entre linhas */
+    .pain-text {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 400;
+      color: #F5F0E8;
+      line-height: 1.55;
+    }
+
+    /* Destaque dourado com efeito de revelação da esquerda para a direita */
+    .pain-highlight {
+      color: #FFC107;
+      font-weight: 700;
+      position: relative;
+      display: inline;
+      background: linear-gradient(90deg, #FFC107 0%, #FFE082 50%, #FFC107 100%);
+      background-size: 200% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #FFC107;
+      transition: background-position 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Animações via IntersectionObserver (Progressive Enhancement) */
+    /* Por padrão (se JS falhar), tudo já está 100% visível! */
+    .pain-animated .pain-card {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .pain-animated .pain-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .pain-animated .pain-card.is-visible .pain-highlight {
+      background-position: 0% 0;
+      -webkit-text-fill-color: transparent;
+      animation: highlightShimmer 1.8s ease-out 1;
+    }
+
+    @keyframes highlightShimmer {
+      0% {
+        filter: drop-shadow(0 0 0px transparent);
+      }
+      50% {
+        filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.7));
+      }
+      100% {
+        filter: drop-shadow(0 0 0px transparent);
+      }
+    }
+
+    /* Preferência de redução de movimento */
+    @media (prefers-reduced-motion: reduce) {
+      .pain-card,
+      .pain-animated .pain-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .pain-line-fill {
+        transform: scaleY(1) !important;
+        transition: none !important;
+      }
+      .pain-highlight {
+        animation: none !important;
+        -webkit-text-fill-color: #FFC107 !important;
+      }
+    }
+
+    /* Mobile First Breakpoints (360px, 390px, 768px) */
+    @media (max-width: 480px) {
+      .pain-container {
+        padding: 0 14px;
+      }
+
+      .pain-timeline-wrapper {
+        padding-left: 30px;
+      }
+
+      .pain-cycle-track {
+        width: 26px;
+      }
+
+      .pain-line-down {
+        left: 20px;
+      }
+
+      .pain-node {
+        left: -15px;
+        width: 8px;
+        height: 8px;
+      }
+
+      .pain-card-inner {
+        padding: 16px 14px;
+        gap: 12px;
+      }
+
+      .pain-icon-wrap {
+        width: 36px;
+        height: 36px;
+      }
+
+      .pain-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .pain-text {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .pain-container {
+        padding: 0 10px;
+      }
+      .pain-timeline-wrapper {
+        padding-left: 26px;
+      }
+      .pain-line-down {
+        left: 17px;
+      }
+      .pain-node {
+        left: -13px;
+      }
+      .pain-card-inner {
+        padding: 14px 12px;
+        gap: 10px;
+      }
+      .pain-text {
+        font-size: 16px;
+      }
+    }
+
+    

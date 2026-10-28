@@ -1,0 +1,178 @@
+{
+  "360": [
+    {
+      "index": 0,
+      "cardHeight": 102,
+      "cardCenterY": 214.1,
+      "nodeCenterY": 214.3,
+      "diff": -0.2
+    },
+    {
+      "index": 1,
+      "cardHeight": 102,
+      "cardCenterY": 332.1,
+      "nodeCenterY": 332.3,
+      "diff": -0.2
+    },
+    {
+      "index": 2,
+      "cardHeight": 102,
+      "cardCenterY": 450.1,
+      "nodeCenterY": 450.3,
+      "diff": -0.2
+    },
+    {
+      "index": 3,
+      "cardHeight": 78,
+      "cardCenterY": 556.1,
+      "nodeCenterY": 556.3,
+      "diff": -0.2
+    },
+    {
+      "index": 4,
+      "cardHeight": 102,
+      "cardCenterY": 662.1,
+      "nodeCenterY": 662.3,
+      "diff": -0.2
+    },
+    {
+      "index": 5,
+      "cardHeight": 102,
+      "cardCenterY": 780.1,
+      "nodeCenterY": 780.3,
+      "diff": -0.2
+    }
+  ],
+  "390": [
+    {
+      "index": 0,
+      "cardHeight": 106,
+      "cardCenterY": 211.6,
+      "nodeCenterY": 211.6,
+      "diff": 0
+    },
+    {
+      "index": 1,
+      "cardHeight": 106,
+      "cardCenterY": 333.6,
+      "nodeCenterY": 333.6,
+      "diff": 0
+    },
+    {
+      "index": 2,
+      "cardHeight": 106,
+      "cardCenterY": 455.6,
+      "nodeCenterY": 455.6,
+      "diff": 0
+    },
+    {
+      "index": 3,
+      "cardHeight": 82,
+      "cardCenterY": 565.6,
+      "nodeCenterY": 565.6,
+      "diff": 0
+    },
+    {
+      "index": 4,
+      "cardHeight": 106,
+      "cardCenterY": 675.6,
+      "nodeCenterY": 675.6,
+      "diff": 0
+    },
+    {
+      "index": 5,
+      "cardHeight": 106,
+      "cardCenterY": 797.6,
+      "nodeCenterY": 797.6,
+      "diff": 0
+    }
+  ],
+  "768": [
+    {
+      "index": 0,
+      "cardHeight": 91.6,
+      "cardCenterY": 222.6,
+      "nodeCenterY": 222.6,
+      "diff": 0
+    },
+    {
+      "index": 1,
+      "cardHeight": 82,
+      "cardCenterY": 325.4,
+      "nodeCenterY": 325.4,
+      "diff": 0
+    },
+    {
+      "index": 2,
+      "cardHeight": 91.6,
+      "cardCenterY": 428.2,
+      "nodeCenterY": 428.2,
+      "diff": 0
+    },
+    {
+      "index": 3,
+      "cardHeight": 82,
+      "cardCenterY": 531,
+      "nodeCenterY": 531,
+      "diff": 0
+    },
+    {
+      "index": 4,
+      "cardHeight": 91.6,
+      "cardCenterY": 633.8,
+      "nodeCenterY": 633.8,
+      "diff": 0
+    },
+    {
+      "index": 5,
+      "cardHeight": 82,
+      "cardCenterY": 736.6,
+      "nodeCenterY": 736.6,
+      "diff": 0
+    }
+  ],
+  "1200": [
+    {
+      "index": 0,
+      "cardHeight": 91.6,
+      "cardCenterY": 290,
+      "nodeCenterY": 290,
+      "diff": 0
+    },
+    {
+      "index": 1,
+      "cardHeight": 82,
+      "cardCenterY": 392.8,
+      "nodeCenterY": 392.8,
+      "diff": 0
+    },
+    {
+      "index": 2,
+      "cardHeight": 91.6,
+      "cardCenterY": 495.6,
+      "nodeCenterY": 495.6,
+      "diff": 0
+    },
+    {
+      "index": 3,
+      "cardHeight": 82,
+      "cardCenterY": 598.4,
+      "nodeCenterY": 598.4,
+      "diff": 0
+    },
+    {
+      "index": 4,
+      "cardHeight": 91.6,
+      "cardCenterY": 701.2,
+      "nodeCenterY": 701.2,
+      "diff": 0
+    },
+    {
+      "index": 5,
+      "cardHeight": 82,
+      "cardCenterY": 804,
+      "nodeCenterY": 804,
+      "diff": 0
+    }
+  ]
+}

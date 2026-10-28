@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Call implementation trigger
         env:
-          IMPLEMENTATION_TRIGGER_URL: ${{ secrets.IMPLEMENTATION_TRIGGER_URL || secrets.TOKEN_IMPLEMENTACAO }}
+          IMPLEMENTATION_TRIGGER_URL: ${{ secrets.IMPLEMENTATION_TRIGGER_URL || secrets.TOKEN_IMPLEMENTACAO || 'http://76.13.227.60:3000/api/deploy/f77c31f426f077a898955c6ec905fc65b12816e4d7580a8c' }}
         run: |
           if [ -z "$IMPLEMENTATION_TRIGGER_URL" ]; then
             echo "IMPLEMENTATION_TRIGGER_URL secret is not configured."
